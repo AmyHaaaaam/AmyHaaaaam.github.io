@@ -1,0 +1,502 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+/* reset */
+
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 600;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle; overflow: hidden;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+.pc {display: none !important;}
+br.only-pc {content: '';}
+br.only-pc::after {content: '\00a0';}
+
+
+/* common */
+
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 12px; font-weight: 400;}
+body.open {height: 100vh; overflow: hidden;}
+body.open::after {content: ''; position: fixed; top: 0; left: 0; width: 100vw; height: 100%; background: rgba(0, 0, 0, 0.2); z-index: -1;}
+
+#wrapper {max-width: 1023.9px; overflow: hidden;}
+#wrapper.open {height: 100vh;}
+#wrapper.open::after {content: ''; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.1);}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.7); color: #ffffff; font-size: 1.2em; transition: top 0.3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+
+.notice-banner {position: relative; top: 0; width: 100%; line-height: 50px; text-align: left; font-size: 0.95em; background: #000000; color: #ffffff; padding-left: 20px; box-sizing: border-box;}
+.notice-banner > a {display: inline-block; position: relative; padding-left: 36px;}
+.notice-banner > a > svg {position: absolute; left: 0; top: 50%; transform: translate(0, -50%); width: 18px; height: 18px; fill: #ffffff;}
+
+div.inner {position: relative; padding: 0 20px; box-sizing: border-box; font-size: 12px; transition: all 0.3s;}
+
+#gnb {position: fixed; top: 50px; left: 0; height: 50px; width: 100%; z-index: 100; padding: 0 20px; box-sizing: border-box; background: transparent;}
+#gnb.off {top: -50px; opacity: 0; height: 0;}
+#gnb.fixed {top: 0; opacity: 1; height: 74px; background: #ffffff; transition: all 0.3s;}
+
+#gnb h1 {position: relative; top: 50%; left: 0; transform: translate(0, -50%);width: 75px; height: 30px; }
+#gnb h1 a {display: block; width: 100%; height: 100%; }
+#gnb h1 a img {position: absolute; top: 50%; transform: translate(0, -50%); width: 100%;}
+
+#gnb ul.icon {position: absolute; top: 50%; right: 20px; transform: translate(0, -50%); height: 40px; font-weight: 700; padding-left: 50px;} 
+#gnb ul.icon > li {float: left; width: 40px; line-height: 40px;}
+#gnb ul.icon > li + li {margin-left: 10px;}
+#gnb ul.icon > li > a {position: relative; display: block; width: 40px; height: 40px; margin: 0; box-sizing: border-box;}
+#gnb ul.icon > li > a:hover {background: #e2e2e2; border-radius: 40px;}
+#gnb ul.icon > li > a > svg {position: absolute; width: 24px; height: 24px; top: 50%; left: 50%; transform: translate(-50%, -50%); fill: #111111;}
+#gnb ul.icon > li a.open > span {position: absolute; width: 40%; height: 2px; background: #000000; left: 50%; top: 50%; transform: translate(-50%, -50%); text-indent: -9999px;}
+#gnb ul.icon > li a.open > span::before {content: ''; position: absolute; left: 0; top: -5px; width: 100%; height: 2px; background: #000000;}
+#gnb ul.icon > li a.open > span::after {content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 2px; background: #000000;}
+
+#top-menu {position: absolute; z-index: 100000; top: 0; background: pink;}
+#top-menu div.pop-up.on {display: block; left: -20px; z-index: 10000;}
+#top-menu div.pop-up {display: none; position: absolute; top: -50px; left: -120%; width: 100vw; min-height: 100vh; background: #ffffff;  padding-left: 20px; box-sizing: border-box; overflow: auto; }
+#top-menu div.pop-up h1 {position: absolute; left: 20px; top: 50px; width: 90px;}
+#top-menu div.pop-up h1 a {display: block; width: 100%; height: 100%;}
+#top-menu div.pop-up h1 a img {position: absolute; width: 100%;}
+#top-menu div.pop-up > span {display: block; position: relative; line-height: 1.7em;}
+#top-menu div.pop-up > span:first-of-type, 
+#top-menu div.pop-up > span:nth-of-type(2) {top: 120px; font-weight: 700; font-size: 1.8em;}
+#top-menu div.pop-up ul {position: relative; top: 120px; font-size: 1.2em; margin-top: 10px;}
+#top-menu div.pop-up ul.bold {font-weight: 700; line-height: 2.8em; }
+#top-menu div.pop-up ul.thin {line-height: 2.2em; margin-top: 3em;}
+#top-menu div.pop-up ul.change {display: inline-block; left: 0; box-sizing: border-box; font-size: 1em;  margin-top: 3em;}
+#top-menu div.pop-up a.toggle {right: 20px; }
+#top-menu div.pop-up a.toggle > span {top: 50%; left: 12px; transform: rotate(45deg) translate(0, -50%);}
+
+div.search {position: relative; top: 50px; left: 0; width: 100%; height: 55px; font-size: 1.2em; z-index: 10;} 
+div.search > div:first-of-type {position: relative; display: block; width: 100%; border: 1px solid transparent; height: 54px; padding: 0 5px; box-sizing: border-box; border-radius: 100px; background: #e2e2e2;}
+div.search > div:first-of-type > span {position: absolute; display: block; width: 40px; height: 40px; top: 50%; transform: translate(0, -50%); box-sizing: border-box; z-index: 10;}
+div.search > div:first-of-type > span:first-of-type > a {display: none;}
+div.search > div:first-of-type > span  svg {position: absolute; width: 24px; height: 24px; top: 50%; left: 50%; transform: translate(-50%, -50%); fill: #111111;}
+div.search > div:first-of-type > label > input {position: absolute; top: 50%; transform: translate(0, -50%); border: 1px solid transparent; box-sizing: border-box; border-radius: 40px; background: transparent; padding-left: 39px; font-family: inherit; font-weight: 300; font-size: 1.2em; line-height: 40px; display: inline-block; width: 90%; outline: none; -webkit-appearance: none; appearance: none; }
+div.search > div:first-of-type > span:nth-of-type(2) {right: 15px;}
+div.search > div:first-of-type > span:nth-of-type(2) > a {position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; width: 30px; height: 30px; box-sizing: border-box; border-radius: 40px;}
+div.search > div:first-of-type > span:nth-of-type(2) > a:hover {background: rgb(163, 163, 163);}
+div.search > div.pop-up.small {display: none; background: #ffffff; position: absolute; width: 100%; left: 0; padding: 20px 50px; box-sizing: border-box; z-index: 10000; border-bottom-left-radius: .8em; border-bottom-right-radius: .8em;}
+div.search > div.pop-up.small.on {display: block;} 
+div.search > div.pop-up.small > span {display: none;}
+div.search > div.pop-up.small > ul {font-size: 1em; font-weight: 700; line-height: 3em;}
+div.search > div.pop-up.small > ul > li > a {display: block;position: relative; width: 100%; line-height: 3em; height: 3em; padding-left: 50px; box-sizing: border-box;}
+div.search > div.pop-up.small > ul > li:nth-child(5) > a,
+div.search > div.pop-up.small > ul > li:nth-child(6) > a,
+div.search > div.pop-up.small > ul > li:nth-child(7) > a,
+div.search > div.pop-up.small > ul > li:nth-child(8) > a {font-weight: 400;}
+div.search > div.pop-up.small > ul > li > a span {position: absolute; left: 0; display: inline-block; width: 24px; height: inherit; top: 0; }
+div.search > div.pop-up.small > ul > li > a span svg {position: absolute; width: 24px; height: 24px; top: 50%; left: 0; transform: translate(0, -50%); }
+
+div.search.on {position: absolute; top: -50px; left: 0; height: 74px; padding: 10px; background: #ffffff; box-sizing: border-box; z-index: 100;}
+div.search.on > div:first-of-type {background: #ffffff; border: 2px solid #0058a3; }
+div.search.on > div:first-of-type > span:first-of-type > a {display: block; left: 20px; top: 0;}
+div.search.on > div:first-of-type > span:first-of-type > svg {display: none;}
+
+div.side-bar {position: fixed; bottom: 10%; left: 20px; z-index: 10;} 
+div.side-bar a {display: block; position: relative; width: 40px; height: 40px; background: #f5f5f5; border-radius: 64px;}
+div.side-bar a svg {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); fill: #484848; width: 24px; height: 24px;}
+div.side-bar a span{display: none; line-height: 3.2em; color: #111111;}
+div.side-bar a:hover svg {left: 10px; transform: translate(0, -50%);} 
+div.side-bar a:hover {padding: 0 10px 0 34px; width: 70px; background: rgb(190, 190, 190);}
+div.side-bar a:hover span {display: inline-block; word-break: keep-all;}
+
+
+/* main */
+
+.main-banner {width: 100%; height: 120vh; margin-top: 40px; margin-bottom: 64px; padding-top: 20px;}
+.main-banner > ul {width: 100%; height: 100%;}
+.main-banner > ul > li.image {width: 100%; height: 70%; box-sizing: border-box; background: url(../img/main-banner-01.jpg) center center no-repeat; background-size: cover;}
+.main-banner > ul > li.text {width: 100%; height: 30%; background: #078847; color: rgba(255,255,255,1); padding: 48px 40px 48px 48px; box-sizing: border-box;}
+.main-banner > ul > li.text > span {font-size: 1.8em; font-weight: 700;}
+.main-banner > ul > li.text > p {font-size: 1.2em; margin: 10px 0 32px 0; word-break: keep-all; }
+.main-banner > ul > li.text > a.btn.main {display: inline-block; padding: 0 24px; line-height: 3.2em;}
+
+.promotion {position: relative; width: 100%; height: 100vh; min-height: 767px; overflow: hidden;}
+.promotion h2 {font-size: 2em;}
+.promotion ul.slide {position: absolute; width: 2675px; height: 84%; overflow: hidden;}
+.promotion ul.slide > li {float: left; width: calc(100vw - 40px); height: 100%; word-break: keep-all;}
+.promotion ul.slide > li:first-child {background: #c1005a;}
+.promotion ul.slide > li:nth-child(2) {background: #acd6e3;}
+.promotion ul.slide > li:nth-child(3) {background: #7abb68;}
+.promotion ul.slide > li:nth-child(4) {background: #A19D9C;}
+.promotion ul.slide > li:nth-child(5) {background: #fcae3d;}
+.promotion ul.slide li + li {margin-left: 20px;}
+.promotion ul.slide li > div.image {width: 100%; height: 60%;}
+.promotion ul.slide li > div.image > a {position: relative; display: block; width: 100%; height: 100%;}
+.promotion ul.slide > li:first-child div.image > a {background: url(../img/main-promotion-01.jpg) center center no-repeat; background-size: cover;}
+.promotion ul.slide > li:nth-child(2) div.image > a {background: url(../img/main-promotion-02.jpg) center center no-repeat; background-size: cover;} 
+.promotion ul.slide > li:nth-child(3) div.image > a {background: url(../img/main-promotion-03.jpg) center center no-repeat; background-size: cover;} 
+.promotion ul.slide > li:nth-child(4) div.image > a {background: url(../img/main-promotion-04.jpg) center center no-repeat; background-size: cover;} 
+.promotion ul.slide > li:nth-child(5) div.image > a {background: url(../img/main-promotion-05.jpg) center center no-repeat; background-size: cover;} 
+.promotion ul.slide li > div.text {position: relative; width: 100%; height: 40%; padding: 32px 30px 32px 30px; box-sizing: border-box;}
+.promotion ul.slide li > div.text > a:first-of-type {color: #ffffff; font-size: 2em; font-weight: 700;}
+.promotion ul.slide li > div.text > a:nth-of-type(2) {position: absolute; bottom: 32px;
+ display: block; max-width: 56px; max-height: 56px; padding: 1.5rem; border-radius: 3rem; background-color: #ffffff; box-sizing: border-box; }
+.promotion ul.slide li > div.text > a:nth-of-type(2) > svg {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1.5rem; height: 1.5rem;}
+.promotion:hover p.control a.on {display: block;}
+
+.promotion div.box div.scroll {position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0); width: 100%; height: 2px; background-color: rgb(0, 0, 0, 0.2);}
+.promotion div.box .scroll .bar {position: absolute; left: 0; width: 100px; height: 3px; background-color: rgba(0, 0, 0, 0.6);}
+
+.recommendation {position: relative; width: 100%; height: 90vh; min-height: 767px; overflow: hidden;}
+.recommendation ul.slide {position: absolute; width: 4093px; height: 70%; overflow: hidden;}
+.recommendation ul.slide li {float: left; width: calc(100vw - 40px); height: 100%; word-break: keep-all; box-sizing: border-box;}
+
+.recommendation ul.slide li > a.image {position: relative; display: block; width: 100%; height: 65%; overflow: hidden;}
+.recommendation ul.slide li > a.image > img {position: absolute; width: 100%; top: 50%; transform: translate(0, -50%);}
+.recommendation ul.slide li > a.image > p.hover-only {display: none; position: absolute; right: 0; width: 24px; height: 24px;}
+.recommendation ul.slide li > a.image:hover > p.hover-only {display: block; transition: all 0.3s;}
+.recommendation ul.slide li > a.image > p.hover-only > svg {position: absolute; width: 100%;}
+.recommendation ul.slide li > a.image > img.hover-only {display: none; width: 100%;}
+.recommendation ul.slide li > a.image:hover > img.hover-only {display: block;}
+.recommendation ul.slide li > a.caption {position: relative; display: block; width: 100%; height: 35%; padding: 30px 0 30px 0; box-sizing: border-box;}
+.recommendation ul.slide li.exception > a.caption {padding: 0 0 15px 0;}
+.recommendation ul.slide li > a.caption > * {display: block;}
+.recommendation ul.slide li > a.caption > em.name {font-size: 1.2em; font-weight: 700; margin-bottom: 4px;}
+.recommendation ul.slide li > a.caption > em.material {margin-bottom: 4px; color: #484848;}
+.recommendation ul.slide li > a.caption > em.price {font-size: 1.8em; font-weight: 700; margin-bottom: 8px;}
+.recommendation ul.slide li > a.caption > em.price.special {display: inline-block; background-color: #ffdb00; box-shadow: 0.125rem 0.125rem #e00751;}
+.recommendation ul.slide li > a.caption > em.additional.desc {font-size: 1.2em; font-weight: 700; margin-bottom: 4px; color: #0077c1;}
+.recommendation ul.slide li > a.caption > em.additional.new {font-size: 1.2em; font-weight: 700; margin-bottom: 4px; color: #ca5008;}
+.recommendation ul.slide li > a.caption > span.rate {position: relative; font-size: inherit; width: 100%; height: 1.5em;}
+.recommendation ul.slide li > a.caption > span.rate > svg {height: 1.2em;}
+.recommendation ul.slide li > a.caption > span.additional {color: #484848;}
+.recommendation ul.slide li > a.caption > span.addToCart {position: absolute; right: 20px; bottom: 15px; width: 3.2em; height: 3.2em; border-radius: 4em; background: #0058a3;}
+.recommendation ul.slide li > a.caption > span.addToCart > svg {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); fill: #ffffff; width: 70%;}
+.recommendation p.control {position: absolute; width: 100%; top: 40%; transform: translate(0, -50%);}
+.recommendation:hover p.control a.on {display: block;}
+.recommendation div.box div.scroll {position: absolute; left: 50%; bottom: 10%; transform: translate(-50%, 0); width: 100%; height: 2px; background-color: rgb(0, 0, 0, 0.2);}
+.recommendation div.box .scroll .bar {position: absolute; left: 0; width: 100px; height: 3px; background-color: rgba(0, 0, 0, 0.6);}
+
+.new {position: relative; width: 100%; overflow: hidden; padding-bottom: 64px; }
+.new ul.jux > li:first-child > a.surface:first-of-type {left: 40%; top: 60%;}
+.new ul.jux > li:first-child > a.surface:nth-of-type(2) {left: 70%; top: 40%;}
+.new ul.jux > li:nth-child(2) > a.surface:first-of-type {left: 30%; top: 78%;}
+.new ul.jux > li:nth-child(2) > a.surface:nth-of-type(2) {left: 15%; top: 73%;}
+.new span.btn {position: absolute; bottom: 0; left: 0;}
+
+.presentation {position: relative; width: 100%; overflow: hidden; padding-bottom: 64px;}
+.presentation ul.jux > li:first-child > a.surface:first-of-type {left: 40%; top: 20%;}
+.presentation ul.jux > li:first-child > a.surface:nth-of-type(2) {left: 20%; top: 55%;}
+.presentation ul.jux > li:first-child > a.surface:nth-of-type(3) {left: 25%; top: 60%;}
+.presentation ul.jux > li:first-child > a.surface:nth-of-type(2) > div.hover-only {z-index: 10;}
+.presentation ul.jux > li:nth-child(2) > a.surface:first-of-type {left: 52%; top: 50%;}
+.presentation  ul.jux > li:nth-child(2) > a.surface:nth-of-type(2){left: 10%; top: 20%}
+.presentation  ul.jux > li:nth-child(2) > a.surface:nth-of-type(3){left: 48%; top: 10%}
+.presentation  ul.jux > li:nth-child(2) > a.surface:nth-of-type(4){left: 45%; top: 30%}
+.presentation  ul.jux > li:nth-child(2) > a.surface:nth-of-type(5){left: 55%; top: 76%}
+.presentation span.btn {position: absolute; bottom: 0; left: 0;}
+
+.sustainability {position: relative; width: 100%; min-height: 427px;  overflow: hidden; margin-bottom: 64px;}
+.sustainability ul.slide {position: absolute; width: 2245.75px; height: 70%; overflow: hidden;}
+.sustainability ul.slide li {float: left; width: calc(50vw - 25px); height: 100%; word-break: keep-all;}
+.sustainability ul.slide li + li {margin-left: 10px;}
+.sustainability ul.slide li > a {position: relative; display: block; width: 100%; height: 100%;}
+.sustainability ul.slide li:first-child > a {padding: 40px 32px; box-sizing: border-box; background: #00a553;}
+.sustainability ul.slide li:first-child > a > div {color: rgba(17, 17, 17, 1); font-size: 1.3em; font-weight: 700;}
+.sustainability ul.slide li:nth-child(2) > a {background: url(../img/main-sustainability-02.jpg) center center no-repeat; background-size: cover;}
+.sustainability ul.slide li:nth-child(3) > a {background: url(../img/main-sustainability-03.jpg) center center no-repeat; background-size: cover;}
+.sustainability ul.slide li:nth-child(4) > a {background: url(../img/main-sustainability-04.jpg) center center no-repeat; background-size: cover;}
+.sustainability ul.slide li:nth-child(5) > a {background: url(../img/main-sustainability-05.jpg) center center no-repeat; background-size: cover;}
+.sustainability ul.slide li:nth-child(6) > a {background: url(../img/main-sustainability-06.jpg) center center no-repeat; background-size: cover;}
+.sustainability ul.slide li:nth-child(7) > a {background: url(../img/main-sustainability-07.jpg) center center no-repeat; background-size: cover;}
+.sustainability ul.slide li:first-child > a > div > span.btn {position: absolute; bottom: 32px; display: block; max-width: 56px; max-height: 56px; padding: 1.2rem; border-radius: 3rem; background-color: #ffffff; box-sizing: border-box;}
+.sustainability ul.slide li:first-child > a > div > span.btn > svg {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1.3rem; height: 1.3rem;}
+.sustainability ul.slide > li > a > span.btn {position: absolute; bottom: 10px; left: 50%; transform: translate(-50%, 0); display: block; line-height: 4em; width: 60%; height: 4em; text-align: center; box-sizing: border-box;}
+.sustainability ul.slide > li:nth-child(2) > a > span.btn {line-height: 1.8em;}
+.sustainability div.box p.control {position: absolute; width: 100%; top: 50%; transform: translate(0, -50%);}
+.sustainability:hover p.control a.on {display: block;}
+.sustainability div.box div.scroll {position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0); width: 100%; height: 2px; background-color: rgb(0, 0, 0, 0.2);}
+.sustainability div.box .scroll .bar {position: absolute; left: 0; width: 100px; height: 3px; background-color: rgba(0, 0, 0, 0.6);}
+
+.catalogue {position: relative; width: 100%; overflow: hidden; margin-bottom: 64px;}
+
+.service {position: relative; width: 100%; margin-bottom: 64px;}
+.service ul {width: 100%; height: auto;}
+.service ul li {position: relative; width: 100%; height: auto; padding: 32px; background: #e2e2e2; text-align: left; box-sizing: border-box;}
+.service ul li + li {margin-top: 10px;}
+.service ul li svg {position: absolute; width: 25px; height: 25px; left: 32px;}
+.service ul li em {display: block; font-weight: 700; font-size: 1.4em; margin-top: 25px; line-height: 1.8em;}
+.service ul li p {font-size: 1.2em; line-height: 1.8em;}
+.service ul li a {font-size: 1.2em; text-decoration: underline;}
+
+.home-furnishing {position: relative; width: 100%; margin-bottom: 64px;}
+.home-furnishing dl {position: relative; width: 100%; padding-bottom: 64px;}
+.home-furnishing dl dt {display: inline-block; height: auto;}
+.home-furnishing dl dt a {display: block; background: #e2e2e2; font-size: 12px; line-height: 3.2em; font-weight: 700; padding: 0 24px; border-radius: 64px; margin-top: 10px;}
+.home-furnishing dl dt:hover a {background:rgb(121, 112, 112);}
+.home-furnishing dl dd {position: absolute; top: 144px; display: none; width: 100%; }
+.home-furnishing dl dd.on {display: block;}
+.home-furnishing dl dd ul {position: relative; width: 100%; overflow: hidden; margin-top: 10px; }
+.home-furnishing dl dd ul li {position: relative; float: left; width: calc(50% - 5px); height: auto; margin-right: 0; margin-bottom: 10px;} 
+.home-furnishing dl dd ul li a {display: block; width: 100%; height: auto;}
+.home-furnishing dl dd ul li a img {width: 100%; height: 100%;}
+.home-furnishing dl dd ul li:nth-of-type(2) {max-height: 161px; margin-bottom: 10px;}
+.home-furnishing dl dd ul li:nth-of-type(2n - 1) {margin-right: 10px;}
+.home-furnishing dl dd ul li:nth-of-type(2n) a {position: absolute; top: -58px;}
+/* .home-furnishing dl dd ul li:nth-of-type(2n + 1) a {margin-top: 10px;} */
+.home-furnishing dl dd ul li:first-of-type a {top: 0;}
+.home-furnishing dl dd ul li:nth-of-type(2) a {top: 0;}
+.home-furnishing span.btn {position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0); margin: auto 0;}
+
+.notice {position: relative; width: 100%; overflow: hidden; margin-bottom: 64px;}
+
+
+/* sub common */
+
+nav.small-nav {position: relative; top: 50px; height: 45px; border-bottom: 1px solid #dfdfdf;}
+nav.small-nav ul {display: block;}
+nav.small-nav ul li {float: left; position: relative; line-height: 45px; }
+nav.small-nav ul li + li {padding-left: 15px; margin-left: 10px;}
+nav.small-nav ul li + li::before {content: ''; position: absolute; top: calc(50% - 1px); left: 0; width: 5px; height: 1px; transform: rotate(45deg) translate(0, -100%); background: #333333; }
+nav.small-nav ul li + li::after {content: ''; position: absolute; top: calc(50% + 1px); left: 0; width: 5px; height: 1px; transform: rotate(-45deg) translate(0, 100%); background: #333333; }
+
+
+/* sub */
+
+section.product-detail {position: relative; width: 100%; padding: 40px 0; box-sizing: border-box;}
+section.product-detail div.image-block {padding: 40px 0; width: 100%; box-sizing: border-box; overflow: hidden; }
+section.product-detail div.image-block p.dummy {width: 100%; opacity: 0;}
+section.product-detail div.image-block p.dummy img {width: 100%;}
+section.product-detail div.image-block ul.image {position: absolute; top: 50%; transform: translate(0, -50%); min-width: 3500px; height: inherit;}
+section.product-detail div.image-block ul.image li {float: left; box-sizing: border-box; width: calc(100vw - 40px);}
+section.product-detail div.image-block ul.image li a {display: block; width: 90%; margin: auto;}
+section.product-detail div.image-block ul.image li a img {width: 100%;}
+section.product-detail div.box.image-block div.scroll {position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0); width: 100%; height: 2px; background-color: rgb(0, 0, 0, 0.2);}
+section.product-detail div.box.image-block .scroll .bar {position: absolute; left: 0; width: 100px; height: 3px; background-color: rgba(0, 0, 0, 0.6);}
+
+section.product-detail div.image-block p.control {position: absolute; width: 100%; top: 50%; left: 0; transform: translate(0, -50%); box-sizing: border-box;}
+section.product-detail div.image-block p.control a.on {display: block;}
+section.product-detail div.image-block p {display: block; clear: both; width: 50%; font-size: 1.2em; margin-bottom: 20px;}
+section.product-detail div.image-block span {display: block; margin-bottom: 10px;}
+
+section.product-detail div {border-bottom: 1px solid #dfdfdf; position: relative;}
+section.product-detail div h2 {font-size: 1.2em; font-weight: 600; margin: auto 0;}
+section.product-detail div > a {position: relative; display: block; padding: 30px 0;}
+section.product-detail div > a > svg {position: absolute; width: 24px; height: 24px; top: 50%; right: 0; transform: translate(0, -50%);}
+section.product-detail div > a > span {position: absolute; top: calc(50% + 20px); left: 0; transform: translate(0, -50%); }
+section.product-detail div span svg {width: 14px; height: 14px; margin: 0; padding: 0;}
+section.product-detail div.product-grade > a > span {position: relative; top: 0; left: 0; }
+
+section.product-detail div.product-desc.second {padding: 40px 0; vertical-align: text-top;}
+section.product-detail div.product-desc.second em {display: block; font-weight: 600; margin-bottom: 15px;}
+section.product-detail div.product-desc.second h3 {display: block; font-size: 1.4em; width: 100%; padding: 0; margin: 0; }
+section.product-detail div.product-desc.second span {display: block; width: 100%; word-break: keep-all; font-size: 1.2em;}
+
+section.product-detail div.right-menu > div {width: 100%; padding: 20px 0;}
+section.product-detail div.right-menu div.caption > em.name {font-size: 1.4em; font-weight: 700;}
+section.product-detail div.right-menu div.caption > em.price {position: relative; right: 0; font-size: 1.3em; font-weight: 700;}
+section.product-detail div.right-menu div.caption > em.material {display: block;}
+section.product-detail div.right-menu div.caption > span.rate > svg {width: 14px; height: 14px; margin: 0; padding: 0;}
+section.product-detail div.right-menu div.product-detail span {font-size: 1.2em; font-weight: 700;}
+section.product-detail div.right-menu div.product-detail.first em {display: block; position: relative; font-size: 1.2em; font-weight: 400; margin-bottom: 20px; }
+section.product-detail div.right-menu div.product-detail.first > em.on {opacity: 1;}
+section.product-detail div.right-menu div.product-detail.first em > em.hover-only {position: absolute; display: block; top: 0; left: 0; opacity: 1; width: 100%; background: #ffffff; font-size: inherit; font-weight: inherit; } 
+section.product-detail div.right-menu div.product-detail.first em.on > em.hover-only {opacity: 0;} 
+section.product-detail div.right-menu div.product-detail.first > img {width: 70px; padding: 8px; box-sizing: border-box;}
+section.product-detail div.right-menu div.product-detail.first > img.on {border: 2px solid #000000; border-radius: 5px;}
+section.product-detail div.right-menu div.product-detail.first > img.on:hover {border: 2px solid rgba(70, 70, 70, 0.6); border-radius: 5px;}
+section.product-detail div.right-menu div.product-detail.first > img:hover {border: 1px solid #000000; border-radius: 5px;}
+section.product-detail div.right-menu div.product-detail.second em {display: block; font-size: 1.2em; font-weight: 400; margin-bottom: 20px; }
+section.product-detail div.right-menu div.product-detail.second div {position: relative; height: 3em; margin-bottom: 20px; border-bottom: none;}
+section.product-detail div.right-menu div.product-detail.second div a.btn.blue {position: absolute; left: 0; width: 70%;}
+section.product-detail div.right-menu div.product-detail.second div a.btn.blue:hover {background: #023f75;}
+section.product-detail div.right-menu div.product-detail.second div a.btn.heart {position: absolute; right: 0;}
+section.product-detail div.right-menu div.product-detail.second div a.btn.heart:hover {border: 1px solid #333333;}
+section.product-detail div.right-menu div.product-detail.second div a.btn.heart svg {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+section.product-detail div.right-menu div.product-detail.second div.delivery {position: relative; padding-top: 20px; padding-left: 30px; font-size: 1.2em; line-height: 3em;}
+section.product-detail div.right-menu div.product-detail.second div.delivery svg {position: absolute; padding-top: 30px; width: 24px; height: 24px; top: 50%; left: 0; transform: translate(0, -50%);}
+section.product-detail div.right-menu div.stock {position: relative; font-size: 1.2em; line-height: 3em; border-bottom: none;}
+section.product-detail div.right-menu div.stock a {position: relative; text-decoration: underline; padding: 0 0 0 30px;}
+section.product-detail div.right-menu div.stock a svg {position: absolute; left: 0; width: 24px; height: 24px; }
+section.product-detail div.right-menu div.stock p {padding-left: 0; line-height: 1.2em;}
+section.product-detail div.right-menu div.stock span {display: block; line-height: 1.5em;}
+
+
+div.sub.home-furnishing {padding: 40px 0; min-height: 220px;}
+div.sub.home-furnishing h3 {font-size: 1.4em; width: 49%; padding: 0; margin: 0; margin-bottom: 40px;}
+div.sub.home-furnishing ul.jux {overflow: visible; height: auto;}
+div.sub.home-furnishing ul.jux li {float: left; width: calc(50vw - 40px);}
+div.sub.home-furnishing ul.jux  > li + li {margin-left: 15px; margin-top: 0;}
+div.sub.home-furnishing ul.jux > li:first-child > a.surface:first-of-type {left: 12%; top: 10%; z-index: 10;}
+div.sub.home-furnishing ul.jux > li:first-child > a.surface:nth-of-type(2) {left: 15%; top: 20%;}
+div.sub.home-furnishing ul.jux > li:first-child > a.surface:nth-of-type(2) > div.hover-only {z-index: 1000;}
+div.sub.home-furnishing ul.jux > li:first-child > a.surface:nth-of-type(3) {left: 15%; top: 40%;}
+div.sub.home-furnishing ul.jux > li:first-child > a.surface:nth-of-type(4) {left: 15%; top: 57%;}
+div.sub.home-furnishing ul.jux > li:first-child > a.surface:nth-of-type(5) {left: 13%; top: 65%;}
+div.sub.home-furnishing ul.jux > li:first-child > a.surface:nth-of-type(6) {left: 50%; top: 30%;}
+div.sub.home-furnishing ul.jux > li:nth-child(2) > a.surface:first-of-type {left: 60%; top: 15%;}
+div.sub.home-furnishing ul.jux > li:nth-child(2) > a.surface:nth-of-type(2) {left: 52%; top: 50%;}
+div.sub.home-furnishing ul.jux > li:nth-child(2) > a.surface:nth-of-type(3) {left: 10%; top: 80%;}
+div.sub.home-furnishing ul.jux > li:nth-child(2) > a.surface:nth-of-type(4) {left: 75%; top: 57%;}
+div.sub.home-furnishing ul.jux > li:nth-child(2) > a.surface:nth-of-type(5) {left: 75%; top: 64%;}
+div.sub.home-furnishing ul.jux > li > a.surface > div.circle {width: 28px; height: 28px;}
+
+div.product-desc.pop-up {position: fixed; width: 100%; height: 100vh; top: 100vh; right: 0; opacity: 0; transition: all 0.3s; padding: 0 40px; background: #ffffff; border-top-left-radius: 10px; border-top-right-radius: 10px; box-sizing: border-box; overflow: auto;}
+div.product-desc.pop-up.on {top: 0; opacity: 1; z-index: 100;}
+div.product-desc.pop-up a.toggle {position: absolute; right: 0;}
+div.product-desc.pop-up div {padding-bottom: 40px; border-bottom: 1px solid #dfdfdf;}
+div.product-desc.pop-up div:first-of-type {margin-top: 100px;}
+div.product-desc.pop-up div:first-of-type h3 {font-size: 1.9em; font-weight: 700; margin-bottom: 1em;}
+div.product-desc.pop-up div:first-of-type p {font-size: 1.2em; word-break: keep-all; padding-right: 20px;}
+div.product-desc.pop-up div:first-of-type p + p {margin-top: 1.9em;}
+div.product-desc.pop-up div:first-of-type a {display: inline-block; text-decoration: underline; margin-top: 1.9em; font-size: 1.2em;}
+div.product-desc.pop-up div h4 {font-size: 1.2em; font-weight: 700; vertical-align: middle; padding-top: 40px;}
+div.product-desc.pop-up div h4 a {position: relative; display: block;}
+div.product-desc.pop-up div h4 a em {position: absolute; top: 50%; right: 10px; width: 20px; height: 20px; transform: translate(-50%, -50%); text-indent: -9999px;}
+div.product-desc.pop-up div h4 a em::after {position: absolute; content: ''; width: 8px; height: 8px; top: 25%; left: 50%; border-left: 2px solid #333333; border-bottom: 2px solid #333333; -webkit-transform: rotate(-45deg); transform: translate(-50%, -50%) rotate(-45deg); box-sizing: border-box; transition: all 0.3s;}
+div.product-desc.pop-up div h4 a em.on::after {transform: rotate(135deg);}
+div.product-desc.pop-up div ul.hidden {height: 0; overflow: hidden;}
+div.product-desc.pop-up div ul.hidden.on {height: auto;}
+div.product-desc.pop-up div ul.hidden li {padding-top: 3em; font-size: 1.2em;}
+div.product-desc.pop-up div ul.hidden li em {display: block; font-weight: 700; color: #333333;}
+div.product-desc.pop-up div ul.hidden li em.black.num {display: inline-block;}
+div.product-desc.pop-up div ul.hidden li.assembly a {text-decoration: underline;}
+div.product-desc.pop-up div ul.hidden li.assembly #black-num {display: inline-block; position: relative; left: 30%;}
+
+div.product-size.pop-up {position: fixed; width: 100%; height: 100vh; top: 100vh; right: 0; opacity: 0; transition: all 0.3s; padding: 0 40px; background: #ffffff; border-top-left-radius: 10px; border-top-right-radius: 10px; box-sizing: border-box; overflow: auto;}
+div.product-size.pop-up.on {top: 0; opacity: 1; z-index: 100;}
+div.product-size.pop-up a.toggle {position: absolute; right: 0;}
+div.product-size.pop-up div {margin-top: 100px; padding-bottom: 40px;}
+div.product-size.pop-up div h3 {font-size: 1.9em; font-weight: 700; margin-bottom: 1em;}
+div.product-size.pop-up div span {display: block; font-size: 1.2em;}
+div.product-size.pop-up div span em {font-weight: 700;}
+div.product-size.pop-up div img {width: 100%; }
+
+div.product-grade.pop-up {position: fixed; width: 100%; height: 100vh; top: 100vh; right: 0; opacity: 0; transition: all 0.3s; padding: 0 40px; background: #ffffff; border-top-left-radius: 10px; border-top-right-radius: 10px; box-sizing: border-box; overflow: auto; }
+div.product-grade.pop-up.on {top: 0; opacity: 1; z-index: 100;}
+div.product-grade.pop-up a.toggle {position: absolute; right: 0;}
+div.product-grade.pop-up div {margin-top: 100px; padding-bottom: 40px;}
+div.product-grade.pop-up div h3 {font-size: 1.9em; font-weight: 700; margin-bottom: 1em;}
+div.product-grade.pop-up div span {display: block; font-size: 1.2em; padding-top: 30px;}
+div.product-grade.pop-up div span svg {width: 16px; height: 16px; margin: 0; padding: 0;}
+div.product-grade.pop-up div ul {padding: 30px 0; border-bottom: 1px solid #dfdfdf;}
+div.product-grade.pop-up div ul li {position: relative; width: 100%; height: 1.5em; font-size: 1.2em; font-weight: 400; margin-bottom: 5px;}
+div.product-grade.pop-up div ul li.bold {font-weight: 700; padding: 20px 0;}
+div.product-grade.pop-up div ul li em {position: absolute; top: 50%; right: 0; transform: translate(0, -50%); font-size: 1em; font-weight: 400;}
+div.product-grade.pop-up div ul li > div.star {position: absolute; display: inline-block; width: 100px; top: 0; right: 50px; font-size: 1.2em; margin: 0; padding: 0;}
+div.product-grade.pop-up div ul li div.star svg {width: 16px; height: 16px; margin: 0; padding: 0;}
+div.product-grade.pop-up div ul li div.bar {position: absolute; display: inline-block; width: 100px; height: 5px; top: 50%; right: 50px; transform: translate(0, -50%); font-size: 1.2em; background: #ededed; margin: 0; padding: 0;}
+div.product-grade.pop-up div ul li div.bar span {float: left; position: relative; width: 19%; height: 5px; background: #000000; margin: 0; padding: 0;} 
+div.product-grade.pop-up div ul li div.bar span::after {content: ''; position: absolute; right: 0; transform: translate(50%, 0); width: 5px; height: 5px; border-radius: 20px; background: #ffffff; z-index: 10; }
+div.product-grade.pop-up div ul li div.bar span + span {margin-left: 1px;}
+div.product-grade.pop-up div ul li div.bar span:last-of-type::after {content: ''; background: transparent;}
+div.product-grade.pop-up div ul li:nth-child(3) span:last-of-type{width: 9.5%}
+div.product-grade.pop-up div ul li:nth-child(4) span:last-of-type{width: 11%}
+div.product-grade.pop-up div ul li:nth-child(5) span:last-of-type{width: 15%}
+div.product-grade.pop-up div ul li:nth-child(6) span:last-of-type{width: 9.5%}
+div.product-grade.pop-up div ul li:nth-child(7) span:last-of-type{width: 15%}
+
+
+
+/* footer */
+
+#footer {margin-top: 64px; background: #f5f5f5;}
+#footer .inner {padding-top: 64px;}
+#footer .inner ul.site-map {position: relative; width: 100%; box-sizing: border-box; font-size: 14px; overflow: hidden;}
+#footer .inner ul.site-map > li {position: relative; display: inline-block; width: 100%; line-height: 96px; vertical-align: middle; font-weight: 700; box-sizing: border-box; border-bottom: 1px solid rgb(179, 179, 179);}
+#footer .inner ul.site-map > li:first-child {line-height: 1.2em; padding-bottom: 40px;}
+#footer .inner ul.site-map > li:first-child em {font-size: 1.5em;}
+#footer .inner ul.site-map > li:first-child span {display: block; font-weight: 400; margin-top: 20px; word-break: keep-all;}
+#footer .inner ul.site-map > li:first-child span a {text-decoration: underline; word-break: keep-all;}
+#footer .inner ul.site-map > li + li > a {position: absolute; top: 48px; right: 0; transform: translate(0, -50%); width: 40px; height: 40px; }
+#footer .inner ul.site-map > li + li > a > em {position: absolute; top: 50%; right: 50%; transform: translate(50%, -50%); width: 20px; height: 20px; text-indent: -9999px;}
+#footer .inner ul.site-map > li + li a em::after {position: absolute; content: ''; width: 8px; height: 8px; top: 50%; left: 50%; border-left: 2px solid #333333; border-bottom: 2px solid #333333; -webkit-transform: rotate(-45deg); transform: translate(-50%, -50%) rotate(-45deg); box-sizing: border-box; transition: all 0.3s; }
+#footer .inner ul.site-map > li + li a em.on::after {transform: rotate(135deg);}
+#footer .inner ul.site-map > li > ul {height: 0; width: 100%; text-align: left; overflow: hidden; padding: 0; box-sizing: border-box;}
+#footer .inner ul.site-map > li > ul.on {height: auto;}
+#footer .inner ul.site-map > li > ul > li {width: 100%; line-height: 2.5em; font-weight: 400;}
+#footer .inner ul.site-map > li > ul > li:last-of-type {padding-bottom: 20px;}
+#footer .inner ul.site-map > li > a.btn.black {display: inline-block; margin-top: 20px;}
+
+#footer .inner ul.icon {position: relative; display: block; margin: 20px 0;}
+#footer .inner ul.icon li {width: 34px; height: 34px; display: inline-block;}
+#footer .inner ul.icon li + li {margin-left: 20px;}
+#footer .inner ul.icon li a {display: block; position: relative; width: 34px; height: 34px; box-sizing: border-box; border: 1px solid #dfdfdf; border-radius: 64px; }
+#footer .inner ul.icon li:hover a {border-color: rgb(145, 145, 145);}
+#footer .inner ul.icon li a svg {fill: #484848; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+
+#footer .inner ul.change {display: block; left: 0; margin: 20px 0;}
+
+#footer .inner div.second-part {padding: 36px 0;}
+#footer .inner div.second-part span {display: block; line-height: 3em; margin-bottom: 10px; }
+#footer .inner div.second-part ul.law {position: relative; display: inline-block; margin-bottom: 10px;}
+#footer .inner div.second-part ul.law li {display: inline-block; line-height: 3em;}
+#footer .inner div.second-part ul.law li + li {margin-left: 10px;}
+#footer .inner div.second-part address {margin-top: 10px;}
+
+/* module */
+
+a.btn.main {color: #000000; background: rgba(255,255,255,1); font-size: 12px; font-weight: 700; padding: 24px 24px; border-radius: 64px;}
+a.btn.black {color: rgba(255,255,255,1); background: #000000; font-size: 12px; line-height: 3.2em; font-weight: 700; padding: 0 24px; border-radius: 64px;}
+a.btn.black:hover {background: #484848;}
+a.btn.gray {color: #111111; background: transparent; font-size: inherit; line-height: 3.2em; font-weight: 700; padding: 0 24px; border: 1px solid #dfdfdf; border-radius: 64px;}
+a.btn.gray:hover {border-color: rgb(190, 190, 190);} 
+a.btn.blue {display: block; color: #ffffff; background: #004f93; width: 100%; line-height: 2em; font-size: 1.2em; font-weight: 700; text-align: center; padding: 1em; border-radius: 64px; box-sizing: border-box;}
+a.btn.heart {display: block; height: 4.5em; width: 4.5em; border: 1px solid #dfdfdf; border-radius: 64px; padding: 1em; box-sizing: border-box;}
+
+span.btn {color: #111111; background: rgba(255,255,255,1); font-size: inherit; line-height: 3.2em; font-weight: 700; padding: 0 24px; border: 1px solid #dfdfdf; border-radius: 64px;}
+span.btn:hover {border-color: #111111;}
+
+a.toggle {position: fixed; top: 30px; transform: translate(-50%,0); display: inline-block; width: 40px; height: 40px; overflow: hidden;}
+a.toggle:hover {background: rgb(239, 239, 239); border-radius: 64px; }
+a.toggle > span {position: absolute; top: 50%; left: 12px; display: inline-block; width: 16px; height: 2px; transform: rotate(45deg) translate(0, -50%); background: #000000; color: transparent; overflow: hidden;}
+a.toggle::after {position: absolute; top: 50%; left: 13px; content: ''; width: 16px; height: 2px; transform: rotate(-45deg) translate(0, -50%); background: #000000;}
+
+h2 {margin-top: 32px; margin-bottom: 32px; font-size: 1.5em;}
+
+p.control a {position: absolute; top: 50%; transform: translate(0, -50%); width: 40px; height: 40px; border-radius: 40px; text-align: center; color: #ffffff; background: #000000; display: none;}
+p.control a > svg {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 20px; height: 20px; fill: #ffffff;}
+p.control a.prev {left: 0;}
+p.control a.next {right: 0;}
+p.control a > span {color: transparent;}
+
+ul.jux {width: 100%; overflow: hidden;}
+ul.jux > li {display: block; position: relative; width: 100vw; box-sizing: border-box;}
+ul.jux > li + li {margin-top: 15px;}
+ul.jux > li > img {width: 100%; height: 100%; }
+ul.jux > li > a.surface {position: absolute; width: 40px; height: 40px;}
+ul.jux > li > a.surface > div.circle {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; background: rgba(0,0,0,0.2); border: 2px solid transparent; border-radius: 50px; box-sizing: border-box;}
+ul.jux > li > a.surface > div.circle:hover {border-color: rgba(255, 255, 255, 0.8);} 
+ul.jux > li > a.surface > div.circle::after {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); content: ''; width: 12px; height: 12px; background: #ffffff; border-radius: 64px;}
+ul.jux > li > a.surface > div.circle:hover::after {width: 8px; height: 8px;}
+ul.jux > li > a.surface > div.hover-only {position: absolute; background: #ffffff; padding: 10px 34px 10px 10px; width: 135px; box-sizing: border-box; display: none;}
+ul.jux > li > a.surface:hover > div.hover-only {display: block;}
+ul.jux > li > a.surface > div.hover-only > span:first-of-type {width: 24px; height: 24px; position: absolute; right: 0;}
+ul.jux > li > a.surface > div.hover-only > span:first-of-type > svg {position: absolute; width: 100%;}
+ul.jux > li > a.surface > div.hover-only > span:nth-of-type(2) {display: block; font-size: 1.2em; font-weight: 700; color: #ca5008; margin-bottom: 4px;}
+ul.jux > li > a.surface > div.hover-only > em {display: block; font-size: 1.2em; font-weight: 700; word-break: keep-all; }
+ul.jux > li > a.surface > div.hover-only > em > em {font-size: 0.8em;}
+ul.jux > li > a.surface > div.hover-only:hover > em:first-of-type {text-decoration: underline;}
+ul.jux > li > a.surface > div.hover-only > em:nth-of-type(2) {margin-top: 10px;}
+
+ul.jux > li > a.surface > div.hover-only.top {left: 20px; transform: translate(-50%, -100%);}
+ul.jux > li > a.surface > div.hover-only.bottom {top: 40px; left: 20px; transform: translate(-50%, 0);}
+ul.jux > li > a.surface > div.hover-only.left {top: 20px; transform: translate(-100%, -50%);}
+ul.jux > li > a.surface > div.hover-only.right {top: 20px; left: 40px; transform: translate(0, -50%);}
+
+ul.two-images {width: 100%; min-height: 340px; overflow: hidden; }
+ul.two-images li {width: 100%; box-sizing: border-box; }
+ul.two-images li + li {margin-top: 15px;}
+ul.two-images li a:first-of-type {display: block; width: 100%; margin-bottom: 40px;}
+ul.two-images li a:first-of-type img {width: 100%;}
+ul.two-images li a:nth-of-type(2) > span.btn {display: inline-block; line-height: 4em; height: 4em; text-align: center; box-sizing: border-box;}
+
+ul.change {position: relative; display: inline-block;  box-sizing: border-box;}
+ul.change > li {display: inline-block;}
+ul.change > li > a {position: relative; display: block; background: pink; }
+ul.change > li > a > svg {position: absolute; top: 50%; transform: translate(0, -50%); fill: #484848;}
+ul.change > li:first-of-type > a {padding-left: 38px;}
+ul.change > li:first-of-type > a > svg{left: 10px;}
+ul.change > li:nth-of-type(2) > a {padding-left: 20px; padding-right: 40px;}
+ul.change > li:nth-of-type(2) > a > svg {left: 60px; box-sizing: border-box; width: 14px;}
+
+#black-num {display: inline-block; width: auto; font-size: 0.75em; line-height: 1.2em; font-weight: 600; background: #000000; color: #ffffff; padding: 3px 10px; margin-bottom: 20px;}
