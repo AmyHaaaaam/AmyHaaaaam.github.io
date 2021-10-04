@@ -5,7 +5,7 @@ $(document).ready(function() {
   preventDefaultAnchor();
 
   setTimeout(function () {
-      furnishing();
+      furnishing()
     }, 500);
 
   $(document).on('click', 'a[href="#"]', function (e) {
