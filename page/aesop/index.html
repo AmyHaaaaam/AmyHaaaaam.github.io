@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-title" content="이솝 대한민국" />
+    <title>이솝 대한민국</title>
+    <meta name="description" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="fa/css/all.min.css" />
+    <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1024px)"  />
+    <link rel="stylesheet" href="css/style-m.css" media="screen and (max-width: 1023.9px)" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+  <body class="main">
+    <div id="wrapper">
+      <a href="#main" id="skip-nav">본문 바로가기</a>
+      <span class="shipping-banner"><a href="#">전 제품 무료 표준 배송 혜택을 즐겨보세요. <i class="fas fa-plus"><span>더보기</span></i></a></span>
+      <header id="header">
+        <nav class="gnb pc">
+          <ul id="main-menu-01">
+            <li data-menu="view"><a href="#">제품보기</a></li>
+            <li data-menu="read"><a href="#">읽기</a></li>
+            <li data-menu="store"><a href="#">스토어</a></li>
+            <li data-menu="search"><a href="#">검색</a></li>
+          </ul>
+          <ul id="main-menu-02">
+            <li data-menu="log-in" class="right-menu"><a href="#">로그인</a></li>
+            <li data-menu="cart" class="right-menu"><a href="#">카트 <span class="cartQty">1</span></a></li>
+          </ul>
+        </nav>
+        <nav class="gnb mobile">
+          <ul id="main-menu-01">
+            <li data-menu="logo" class="logo"><a href="#" class="logo">
+                <span class="ir-hidden">이솝</span>
+                <svg aria-labelledby="271e036f-c8fc-4f6d-a762-b1bdf2ba19b1" class="Icon NavLogo-icon" role="img" viewBox="0 0 489.7 154.3"><title id="271e036f-c8fc-4f6d-a762-b1bdf2ba19b1">Aesop logo</title><g><path class="NavLogo-icon--path" d="M48.6,22.5L31.8,62.2h34.2L48.6,22.5z M28.6,70.3c-3.2,7.4-9.6,21.7-14.9,42c-1.9-0.3-3.5-0.9-6.6-0.9c-3.1,0-5,0.6-7.1,0.9C14.3,81.2,38,28.9,49.4,0c1.3,0.2,2.3,0.5,4,0.5c1.4,0,2.3-0.2,3.5-0.5c12.3,33.7,47.8,111.7,48.1,112.3c-2.7-0.5-5.5-0.9-9.5-0.9c-4.2,0-7.2,0.5-10.3,0.9c-5.6-19.2-12.2-33.2-16.2-42H28.6z"></path><path class="NavLogo-icon--path" d="M172.4,66.6c0-5.3,0-26.6-19.2-26.6c-14,0-20.7,10.6-22.2,26.6H172.4z M130.9,73.3c0,4.5,0,13.6,4.3,21c7.4,12.1,17.8,12.5,22.5,12.5c15.7,0,23.1-9.6,25.5-13l1.9,0.4c-1,4.5-1,7.1-1.1,9.6c-7.1,6.7-16.8,10.5-29.8,10.5c-24.4,0-39.3-15.4-39.3-40.1c0-22.1,12.2-40.7,38.5-40.7c35.8,0,35.3,31.1,35.1,39.8H130.9z"></path><path class="NavLogo-icon--path" d="M249.6,52.1c-0.6-2.4-1.6-6.4-6.2-9.6c-3.4-2.4-7.8-2.7-10.4-2.7c-9.8,0-14.9,5.1-14.9,12c0,9.3,9.5,12.7,15.1,14.1c14.3,3.7,25.8,6.7,25.8,22.8c0,12.2-8.5,25.8-30.8,25.8c-13,0-22-5.5-23.7-6.7c2.1-3.9,3.4-10.7,3.7-12.8l1.9-0.5c1.1,2.7,2.7,7.1,8.7,10.6c4,2.4,8.2,3,11.7,3c8.4,0,16.2-4,16.2-13.2c0-9.1-5.5-10.9-22.3-16.4c-6.9-2.3-18.3-7.2-18.3-21.3c0-9.1,5.6-23.9,27.8-23.9c11.1,0,17.5,3.4,21.2,5.3c-1.6,4.2-2.7,8-3.2,13.5H249.6z"></path><path class="NavLogo-icon--path" d="M291.5,73.5c0,22.3,9.8,34.6,24.5,34.6c15.4,0,25.5-13.3,25.5-34.5c0-12.5-3.9-33.8-24.7-33.8C291.5,39.8,291.5,68.6,291.5,73.5 M357.9,73c0,25.5-17.6,41.5-42,41.5c-17,0-40.8-7.7-40.8-40.6c0-25,16.7-40.6,40.8-40.6 C346.3,33.4,357.9,53.4,357.9,73"></path><path class="NavLogo-icon--path" d="M399.4,49.6c-3.2,4-6.6,9.8-6.6,25.7c0,14.1,3.2,19.4,6.6,23.4c4.1,5,9.6,7.9,17,7.9 c22.9,0,22.9-27.1,22.9-32.3c0-24.2-11.6-33-22-33C408.7,41.2,403.1,44.9,399.4,49.6 M419.3,114.7c-15.1,0-23.6-8.3-26.2-14.9 c0,25.2-0.2,39.8,0.8,54.5c-2.4-0.6-4.5-0.9-8.4-0.9c-4,0-6.1,0.3-8.6,0.9c1.3-20.8,1.8-41.9,1.8-62.7c0-14.6-0.3-34.3-0.8-57.6 c2.2,0.5,4.8,0.9,7.9,0.9c2.9,0,5.6-0.5,7.9-0.9c-0.6,8.8-0.6,11.2-0.6,14.6c2.6-4.2,9.5-15.4,27.3-15.4c16,0,35.6,11.7,35.6,40.3 C455.9,98.8,440.3,114.7,419.3,114.7"></path><rect x="131.8" y="13.5" class="NavLogo-icon--path" width="44.3" height="5"></rect><path class="NavLogo-icon--path" d="M477.2,98.1c0,1.6,0,3,0,4.4c1.3,0,4.3,0,4.3-2.3C481.5,98.1,479.2,98.1,477.2,98.1 M484.9,109.1 c-0.4,0-0.7-0.1-1.2-0.1c-0.4,0-0.8,0.1-1.5,0.1c-2-2.9-3.6-4.5-4.7-5.8h-0.4c0,1.8,0,3.2,0.2,5.8c-0.5,0-0.7-0.1-1.3-0.1 c-0.6,0-0.8,0.1-1.1,0.1c0.1-1.3,0.2-2.7,0.2-6.2c0-3-0.1-4.4-0.1-5.7c0.9,0,1.5,0,2.9,0c2.9,0,5.9,0,5.9,2.8c0,2.5-2.7,2.9-3.9,3 c0.8,1.1,4.4,5.1,5.1,5.9L484.9,109.1z M479.2,94.8c-4.8,0-8.5,3.8-8.5,8.6c0,4.9,3.6,8.6,8.5,8.6c4.9,0,8.5-3.7,8.5-8.6 C487.8,98.7,484.3,94.8,479.2,94.8 M479.2,92.9c5.9,0,10.5,4.7,10.5,10.5c0,5.9-4.7,10.5-10.5,10.5c-5.8,0-10.5-4.6-10.5-10.5 C468.8,97.5,473.5,92.9,479.2,92.9"></path></g></svg>
+              </a></li>
+            <li data-menu="cart" class="right-menu"><a href="#">카트 <span class="cartQty">1</span></a></li>
+            <li data-menu="hamburger" class="right-menu"><a href="#" class="more"><span>더보기</span></a></li>
+          </ul>
+        </nav>
+        <div id="nav-inner" class="off pc">
+          <div class="panel first">
+            <a href="#" class="toggle"><span>CLOSE QUICK LINK</span></a>
+            <ul id="main-menu-panel" class="pc">
+              <li data-menu="view"><a href="#">제품보기</a></li>
+              <li data-menu="read"><a href="#">읽기</a></li>
+              <li data-menu="store"><a href="#">스토어</a></li>
+              <li data-menu="search"><a href="#">검색</a></li>
+            </ul>
+            <h1 data-menu="logo" class="pc">
+              <a href="index.html" class="logo">
+                <span class="ir-hidden">이솝</span>
+                <svg aria-labelledby="271e036f-c8fc-4f6d-a762-b1bdf2ba19b1" class="Icon NavLogo-icon" role="img" viewBox="0 0 489.7 154.3"><title id="271e036f-c8fc-4f6d-a762-b1bdf2ba19b1">Aesop logo</title><g><path class="NavLogo-icon--path" d="M48.6,22.5L31.8,62.2h34.2L48.6,22.5z M28.6,70.3c-3.2,7.4-9.6,21.7-14.9,42c-1.9-0.3-3.5-0.9-6.6-0.9c-3.1,0-5,0.6-7.1,0.9C14.3,81.2,38,28.9,49.4,0c1.3,0.2,2.3,0.5,4,0.5c1.4,0,2.3-0.2,3.5-0.5c12.3,33.7,47.8,111.7,48.1,112.3c-2.7-0.5-5.5-0.9-9.5-0.9c-4.2,0-7.2,0.5-10.3,0.9c-5.6-19.2-12.2-33.2-16.2-42H28.6z"></path><path class="NavLogo-icon--path" d="M172.4,66.6c0-5.3,0-26.6-19.2-26.6c-14,0-20.7,10.6-22.2,26.6H172.4z M130.9,73.3c0,4.5,0,13.6,4.3,21c7.4,12.1,17.8,12.5,22.5,12.5c15.7,0,23.1-9.6,25.5-13l1.9,0.4c-1,4.5-1,7.1-1.1,9.6c-7.1,6.7-16.8,10.5-29.8,10.5c-24.4,0-39.3-15.4-39.3-40.1c0-22.1,12.2-40.7,38.5-40.7c35.8,0,35.3,31.1,35.1,39.8H130.9z"></path><path class="NavLogo-icon--path" d="M249.6,52.1c-0.6-2.4-1.6-6.4-6.2-9.6c-3.4-2.4-7.8-2.7-10.4-2.7c-9.8,0-14.9,5.1-14.9,12c0,9.3,9.5,12.7,15.1,14.1c14.3,3.7,25.8,6.7,25.8,22.8c0,12.2-8.5,25.8-30.8,25.8c-13,0-22-5.5-23.7-6.7c2.1-3.9,3.4-10.7,3.7-12.8l1.9-0.5c1.1,2.7,2.7,7.1,8.7,10.6c4,2.4,8.2,3,11.7,3c8.4,0,16.2-4,16.2-13.2c0-9.1-5.5-10.9-22.3-16.4c-6.9-2.3-18.3-7.2-18.3-21.3c0-9.1,5.6-23.9,27.8-23.9c11.1,0,17.5,3.4,21.2,5.3c-1.6,4.2-2.7,8-3.2,13.5H249.6z"></path><path class="NavLogo-icon--path" d="M291.5,73.5c0,22.3,9.8,34.6,24.5,34.6c15.4,0,25.5-13.3,25.5-34.5c0-12.5-3.9-33.8-24.7-33.8C291.5,39.8,291.5,68.6,291.5,73.5 M357.9,73c0,25.5-17.6,41.5-42,41.5c-17,0-40.8-7.7-40.8-40.6c0-25,16.7-40.6,40.8-40.6 C346.3,33.4,357.9,53.4,357.9,73"></path><path class="NavLogo-icon--path" d="M399.4,49.6c-3.2,4-6.6,9.8-6.6,25.7c0,14.1,3.2,19.4,6.6,23.4c4.1,5,9.6,7.9,17,7.9 c22.9,0,22.9-27.1,22.9-32.3c0-24.2-11.6-33-22-33C408.7,41.2,403.1,44.9,399.4,49.6 M419.3,114.7c-15.1,0-23.6-8.3-26.2-14.9 c0,25.2-0.2,39.8,0.8,54.5c-2.4-0.6-4.5-0.9-8.4-0.9c-4,0-6.1,0.3-8.6,0.9c1.3-20.8,1.8-41.9,1.8-62.7c0-14.6-0.3-34.3-0.8-57.6 c2.2,0.5,4.8,0.9,7.9,0.9c2.9,0,5.6-0.5,7.9-0.9c-0.6,8.8-0.6,11.2-0.6,14.6c2.6-4.2,9.5-15.4,27.3-15.4c16,0,35.6,11.7,35.6,40.3 C455.9,98.8,440.3,114.7,419.3,114.7"></path><rect x="131.8" y="13.5" class="NavLogo-icon--path" width="44.3" height="5"></rect><path class="NavLogo-icon--path" d="M477.2,98.1c0,1.6,0,3,0,4.4c1.3,0,4.3,0,4.3-2.3C481.5,98.1,479.2,98.1,477.2,98.1 M484.9,109.1 c-0.4,0-0.7-0.1-1.2-0.1c-0.4,0-0.8,0.1-1.5,0.1c-2-2.9-3.6-4.5-4.7-5.8h-0.4c0,1.8,0,3.2,0.2,5.8c-0.5,0-0.7-0.1-1.3-0.1 c-0.6,0-0.8,0.1-1.1,0.1c0.1-1.3,0.2-2.7,0.2-6.2c0-3-0.1-4.4-0.1-5.7c0.9,0,1.5,0,2.9,0c2.9,0,5.9,0,5.9,2.8c0,2.5-2.7,2.9-3.9,3 c0.8,1.1,4.4,5.1,5.1,5.9L484.9,109.1z M479.2,94.8c-4.8,0-8.5,3.8-8.5,8.6c0,4.9,3.6,8.6,8.5,8.6c4.9,0,8.5-3.7,8.5-8.6 C487.8,98.7,484.3,94.8,479.2,94.8 M479.2,92.9c5.9,0,10.5,4.7,10.5,10.5c0,5.9-4.7,10.5-10.5,10.5c-5.8,0-10.5-4.6-10.5-10.5 C468.8,97.5,473.5,92.9,479.2,92.9"></path></g></svg>
+              </a>
+            </h1>
+            <ul data-menu="view" id="panel1-sub-menu" class="view">
+                <li data-menu="view" id="skin"><a href="#">스킨</a><sup class="hover-only">103</sup>
+                </li>
+                <li data-menu="view" id="hair"><a href="#">헤어</a><sup class="hover-only">11</sup>
+                </li>
+                <li data-menu="view"><a href="#">바디 &amp 핸드</a><sup class="hover-only">90</sup>
+                </li>
+                <li data-menu="view"><a href="#">향수</a><sup class="hover-only">9</sup></li>
+                <li data-menu="view"><a href="#">홈</a><sup class="hover-only">28</sup>
+                </li>
+                <li data-menu="view"><a href="#">키트 &amp 여행제품</a><sup class="hover-only">24</sup>
+                </li>
+                <li data-menu="view"><a href="#">기프트 가이드</a><sup class="hover-only">67</sup>
+                </li>
+                <li data-menu="view" class="recent-order"><a href="#">최근 주문 내역</a></li>
+            </ul>
+            <ul data-menu="read" id="panel1-sub-menu"  class="read">
+              <li data-menu="read"><a href="#">회사 소개</a></li>
+              <li data-menu="read"><a href="#">철학</a></li>
+              <li data-menu="read"><a href="#">더 렛저</a></li>
+              <li data-menu="read"><a href="#">The Fabulist</a></li>
+              <li data-menu="read"><a href="#">Taxonomy of Design</a></li>
+            </ul>
+            <ul data-menu="store" id="panel1-sub-menu" class="store">
+              <li data-menu="store">
+                <span>
+                  <a href="#" class="btn loca">현재 위치에서 찾기</a>
+                </span>
+                <p>또는 도로명으로 검색</p>
+                <div class="search">
+                  <label for="search"> 
+                    <input type="text" class="search" />
+                    <span>도시로 검색</span>
+                  </label>
+                  <a href="#">
+                    <svg aria-labelledby="450bbfc9-b29b-4614-82d3-6f792a39c50e" class="Icon Panel-input--searchIcon" role="img" viewBox="0 0 50 50"><title id="450bbfc9-b29b-4614-82d3-6f792a39c50e">매장 검색</title><g><path d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"></path></g></svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <ul data-menu="search" id="panel1-sub-menu" class="search">
+              <li data-menu="search">
+                <div class="search">
+                  <label for="search">
+                    <input type="search" class="search" placeholder="" />
+                  </label>
+                  <a href="#">
+                    <svg aria-labelledby="450bbfc9-b29b-4614-82d3-6f792a39c50e" class="Icon Panel-input--searchIcon" role="img" viewBox="0 0 50 50"><title id="450bbfc9-b29b-4614-82d3-6f792a39c50e">r검색창</title><g><path d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"></path></g></svg>
+                  </a>
+                </div>
+              </li>
+              <li data-menu="search">
+                <span>인기 검색어</span>
+                <ul>
+                  <li class="list-item">클렌저</li>
+                  <li class="list-item">페뷸러스</li>
+                  <li class="list-item">파슬리</li>
+                  <li class="list-item">향수</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="panel second off">
+            <a href="#" class="toggle"><span>CLOSE QUICK LINK</span></a>
+            <ul data-menu="view">
+              <li>
+                <ul id="panel2-sub-menu-01" class="view on">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">스킨 케어 기프트</a><sup class="hover-only">17</sup></li>
+                  <li><a href="#">클렌저</a><sup class="hover-only">9</sup></li>
+                  <li><a href="#">각질 제거</a><sup class="hover-only">3</sup></li>
+                  <li><a href="#">트리트먼트 마스크</a><sup class="hover-only">11</sup></li>
+                  <li><a href="#">토너</a><sup class="hover-only">4</sup></li>
+                  <li><a href="#">하이드레이터</a><sup class="hover-only">25</sup></li>
+                  <li><a href="#">립 아이</a><sup class="hover-only">5</sup></li>
+                  <li><a href="#">쉐이빙</a><sup class="hover-only">7</sup></li>
+                  <li><a href="#">선 케어 SPF</a><sup class="hover-only">5</sup></li>
+                  <li><a href="#">키트</a><sup class="hover-only">8</sup></li>
+                  <li><a href="#">스킨케어 세트 추천</a><sup class="hover-only">9</sup></li>
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-02" class="view">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">샴푸</a></li>
+                  <li><a href="#">컨디셔너</a></li>
+                  <li><a href="#">트리트먼트</a></li>
+                  <li><a href="#">그루밍</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-03" class="view">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">핸드 및 바디 케어 기프트</a></li>
+                  <li><a href="#">핸드</a></li>
+                  <li><a href="#">바디</a></li>
+                  <li><a href="#">퍼스널 케어</a></li>
+                  <li><a href="#">번들</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-04">
+                  <li><a href="#">향수 모두 보기</a></li>
+                  <li class="panel2-product 01">
+                    <a href="#">
+                      <span class="product-name">로즈 오 드 퍼퓸</span>
+                      <span class="product-desc">로즈, 시소, 과이악우드</span>
+                      <span class="product-detail">50mL / ₩ 180,000</span>
+                      <div><img alt="로즈 오 드 퍼퓸" src="img/perfume-01.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 02">
+                    <a href="#">
+                      <span class="product-name">로즈 앙상블</span>
+                      <span class="product-desc">for those who relish vibrant florals</span>
+                      <span class="product-detail">3제품 / ₩ 230,000</span>
+                      <div><img alt="로즈 앙상블" src="img/perfume-02.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 03"> 
+                    <a href="#">
+                      <span class="product-name">휠 오 드 퍼퓸</span>
+                      <span class="product-desc">스모키 노트, 섬세한 스파이시, 흙내음이 조합된 향</span>
+                      <span class="product-detail">50mL / ₩ 140,000</span>
+                      <div><img alt="휠 오 드 퍼퓸" src="img/perfume-03.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 04">
+                    <a href="#">
+                      <span class="product-name">휠 앙상블</span>
+                      <span class="product-desc">향수, 바디 스크럽, 핸드 밤</span>
+                      <span class="product-detail">3 제품/ ₩ 216,000</span>
+                      <div><img alt="휠 앙상블" src="img/perfume-04.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 05">
+                    <a href="#">
+                      <span class="product-name">마라케시 인텐스 퍼퓸</span>
+                      <span class="product-desc">가장 강렬한 향수</span>
+                      <span class="product-detail">10mL / ₩ 110,000</span>
+                      <div> <img alt="마라케시 인텐스 퍼퓸" src="img/perfume-05.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 06">
+                    <a href="#">
+                      <span class="product-name">마라케시 인텐스 앙상블</span>
+                      <span class="product-desc">우디한 아로마를 좋아하는 분들을 위해</span>
+                      <span class="product-detail">3 제품 / ₩ 165,000</span>
+                      <div><img alt="마라케시 인텐스 앙상블림" src="img/perfume-06.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 07">
+                    <a href="#">
+                      <span class="product-name">마라케시 오 드 퍼퓸</span>
+                      <span class="product-desc">우디, 오리엔탈, 플로랄향</span>
+                      <span class="product-detail">50mL / ₩  145,000</span>
+                      <div><img alt="마라케시 오 드 퍼퓸" src="img/perfume-07.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 08">
+                    <a href="#">
+                      <span class="product-name">테싯 오 드 퍼퓸</span>
+                      <span class="product-desc">상쾌한, 그린, 시트러스향</span>
+                      <span class="product-detail">50mL / ₩ 130,000</span>
+                      <div><img alt="테싯 오 드 퍼퓸" src="img/perfume-08.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 09">
+                    <a href="#">
+                      <span class="product-name">테싯 앙상블</span>
+                      <span class="product-desc">시트러스 아로마를 즐기는 사람을 위해</span>
+                      <span class="product-detail">3 제품 / ₩ 185,000</span>
+                      <div><img alt="테싯 앙상블" src="img/perfume-09.png" /></div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-05" class="view">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">홈 케어 기프트</a></li>
+                  <li><a href="#">홈</a></li>
+                  <li><a href="#">문학</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-06" class="view">
+                  <li><a href="#">시즈널 기프트 키트</a></li>
+                  <li><a href="#">페이스</a></li>
+                  <li><a href="#">바디 &amp 핸드</a></li>
+                  <li><a href="#">여행</a></li>
+                  <li><a href="#">남성</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-07" class="view">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">시즈널 기프트 키트</a></li>
+                  <li><a href="#">이솝에서 사랑받는 제품</a></li>
+                  <li><a href="#">작은 제스처</a></li>
+                  <li><a href="#">관대한 선물</a></li>
+                  <li><a href="#">나를 위한 선물</a></li>
+                  <li><a href="#">홈 케어 기프트</a></li>
+                  <li><a href="#">트래블 기프트</a></li>
+                  <li><a href="#">기프트 번들</a></li>
+                  <li><a href="#">Lunar New Year</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul data-menu="read">
+              <li>
+                <ul id="panel2-sub-menu-08" class="read">
+                  <li><a href="#">브랜드 스토리</a></li>
+                  <li><a href="#">채용정보</a></li>
+                  <li><a href="#">문의하기</a></li>
+                  <li><a href="#">이솝 재단</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-09" class="read">
+                  <li><a href="#">제품</a></li>
+                  <li><a href="#">디자인</a></li>          
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-10" class="read">
+                  <li><a href="#">2020년 2월호</a><span>도시 생활의 마법과 신비</span></li>
+                  <li><a href="#">2019년 11월호</a><span>창조하고 영감을 주는 이들에 관하여</span></li>
+                  <li><a href="#">2019년 10월호</a><span>고요를 지지하며</span></li>
+                  <li><a href="#">2019년 9월호</a><span>한가로울 때 눈여겨볼 수 잇는 다채로운 발견</span></li>
+                  <li><a href="#">2019년 8월호</a><span>남반구와 북반구의 계절적 기분전환</span></li>
+                  <li><a href="#">2019년 7월호</a><span>훌륭한 신념을 지닌 롤모델들</span></li>
+                  <li><a href="#">2019년 6월호</a><span>내부를 들여다보는 외부에 관하여</span></li>
+                  <li><a href="#">2019년 5월호</a><span>넓고도 깊은 여정에 관하여</span></li>
+                  <li><a href="#">2019년 4월호</a><span>간절기를 풍요롭게 할 사색적이고도 활기찬 일들</span></li>
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-11" class="read">
+                  <li><a href="#"><em>Chilly Gonzales</em></a><span>Interview By Thomas Chatterton Williams</span></li>
+                  <li><a href="#"><em>Toys</em></a><span>By Jayne Anne Phillips</span></li>
+                  <li><a href="#"><em>Prince with Golden Hair</em></a><span>By Ludmilla Petrushevskaya</span></li>
+                  <li><a href="#"><em>Fancy Ways</em></a><span>By Édouard Louis</span></li>
+                  <li><a href="#"><em>Marcel Dzama</em></a><span>Interview by David Gordon</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="panel third off">
+            <ul id="panel3-sub-menu-01">
+              <li><a href="#">스킨 케어 기프트 모두 보기</a></li>
+              <li class="panel3-product 01">
+                <a href="#">
+                  <span class="product-name">페뷸러스 페이스 클렌저</span>
+                  <span class="product-desc">대부분 피부 타입에 이상적</span>
+                  <span class="product-detail">2사이즈 / ₩ 33,000 원부터</span>
+                  <div><img alt="페뷸러스 페이스 클렌저" src="img/menu-01.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 02">
+                <a href="#">
+                  <span class="product-name">파슬리 씨드 안티 옥시던트 세럼</span>
+                  <span class="product-desc">항산화 효과가 뛰어난 추출물의 복합적 블렌드</span>
+                  <span class="product-detail">100mL / ₩ 85,000</span>
+                  <div><img alt="파슬리 씨드 안티 옥시던트 세럼" src="img/menu-02.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 03"> 
+                <a href="#">
+                  <span class="product-name">로즈힙 씨드 립 크림</span>
+                  <span class="product-desc">비타민을 풍부하게 함유한 립 하이드레이터</span>
+                  <span class="product-detail">6mL</span>
+                  <div><img alt="로즈힙 씨드 립 크림" src="img/menu-03.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 04">
+                <a href="#">
+                  <span class="product-name">비 앤 티 밸런싱 토너</span>
+                  <span class="product-desc">특히 민감성 피부에 이상적</span>
+                  <span class="product-detail">2사이즈 / ₩ 39,000 원부터</span>
+                  <div><img alt="비 앤 티 밸런싱 토너" src="img/menu-04.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 05">
+                <a href="#">
+                  <span class="product-name">파슬리 씨드 페이셜 클렌저</span>
+                  <span class="product-desc">중성, 복합성, 문제성 피부</span>
+                  <span class="product-detail">2사이즈 / ₩ 45,000 원부터</span>
+                  <div> <img alt="파슬리 씨드 페이셜 클렌저" src="img/menu-05.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 06">
+                <a href="#">
+                  <span class="product-name">만다린 페이셜 하이드레이팅 크림</span>
+                  <span class="product-desc">번들거림이나 유분감이 없이 수분을 공급합니다.</span>
+                  <span class="product-detail">60mL / ₩ 63,000</span>
+                  <div><img alt="만다린 페이셜 하이드레이팅 크림" src="img/menu-06.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 07">
+                <a href="#">
+                  <span class="product-name">이미디에이트 모이스처 페이셜 하이드로졸</span>
+                  <span class="product-desc">빠르게 수분을 공급하는 가벼운 미스트</span>
+                  <span class="product-detail">50mL / ₩  31,000</span>
+                  <div><img alt="이미디에이트 모이스처 페이셜 하이드로졸" src="img/menu-07.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 08">
+                <a href="#">
+                  <span class="product-name">카멜리아 너트 페이셜 하이드레이팅 크림</span>
+                  <span class="product-desc">중성, 건성, 민감성 피부</span>
+                  <span class="product-detail">60mL / ₩ 63,000</span>
+                  <div><img alt="카멜리아 너트 페이셜 하이드레이팅 크림" src="img/menu-08.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 09">
+                <a href="#">
+                  <span class="product-name">모로칸 네롤리 쉐이빙 듀엣</span>
+                  <span class="product-desc">모든 피부 타입</span>
+                  <span class="product-detail">₩ 100,000</span>
+                  <div><img alt="모로칸 네롤리 쉐이빙 듀엣" src="img/menu-09.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 10">
+                <a href="#">
+                  <span class="product-name">블루 카모마일 페이셜 하이드레이팅 마스크</span>
+                  <span class="product-desc">피부에 필요한 집중적인 수분 충전</span>
+                  <span class="product-detail">60mL / ₩ 65,000</span>
+                  <div><img alt="블루 카모마일 페이셜 하이드레이팅 마스크" src="img/menu-10.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 11">
+                <a href="#">
+                  <span class="product-name">프림로즈 페이셜 클렌징 마스크</span>
+                  <span class="product-desc">피부를 깨끗하게 세정하는 클레이 마스크</span>
+                  <span class="product-detail">60mL / ₩ 41,000</span>
+                  <div><img alt="프림로즈 페이셜 클렌징 마스크" src="img/menu-11.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 12">
+                <a href="#">
+                  <span class="product-name">프로텍티브 립 밤 SPF30</span>
+                  <span class="product-desc">UVB를 차단하는 립 밤</span>
+                  <span class="product-detail">5.5 g / ₩ 41,000</span>
+                  <div><img alt="프로텍티브 립 밤 SPF30" src="img/menu-12.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 13">
+                <a href="#">
+                  <span class="product-name">퀜치: 클래식 스킨 케어 키트</span>
+                  <span class="product-desc"></span>
+                  <span class="product-detail">₩  135,000</span>
+                  <div><img alt="퀜치: 클래식 스킨 케어 키트" src="img/menu-13.png" /></div>                 
+                </a>
+              </li>
+              <li class="panel3-product 14">
+                <a href="#">
+                  <span class="product-name">파슬리 씨드 안티 옥시던트 스킨 케어 키트</span>
+                  <span class="product-desc">대표적인 파슬리 씨드 제품 3종</span>
+                  <span class="product-detail">₩  165,000</span>
+                  <div><img alt="파슬리 씨드 안티 옥시던트 스킨 케어 키트" src="img/menu-14.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 15">
+                <a href="#">
+                  <span class="product-name">아침과 저녁을 위한 비타민 C</span>
+                  <span class="product-desc">집중적인 수분을 전하는 제품 2종 </span>
+                  <span class="product-detail">2 제품 / ₩ 290,000</span>
+                  <div><img alt="아침과 저녁을 위한 비타민 C" src="img/menu-15.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 16">
+                <a href="#">
+                  <span class="product-name">더 아덴트 노마드</span>
+                  <span class="product-desc">파슬리 씨드 스킨 케어 3종</span>
+                  <span class="product-detail">₩  200,000</span>
+                  <div><img alt="더 아덴트 노마드" src="img/menu-16.png" /></div>
+                </a>
+              </li>
+              <li class="panel3-product 17">
+                <a href="#">
+                  <span class="product-name">더 메타피지컬 보야저</span>
+                  <span class="product-desc">비타민을 풍부하게 담은 하이드레이터 2종</span>
+                  <span class="product-detail">₩  205,000</span>
+                  <div class="last"><img alt="더 메타피지컬 보야저" src="img/menu-17.png" /></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="nav-inner-mobile" class="mobile off">
+          <div class="panel first mobile">
+            <ul data-menu="view" class="view on">
+              <li data-menu="skin" id="skin"><a href="#">스킨</a><sup class="hover-only">103</sup>
+              </li>
+              <li data-menu="hair" id="hair"><a href="#">헤어</a><sup class="hover-only">11</sup>
+              </li>
+              <li data-menu="bodyAndHand"><a href="#">바디 &amp 핸드</a><sup class="hover-only">90</sup>
+              </li>
+              <li data-menu="perfume"><a href="#">향수</a><sup class="hover-only">9</sup></li>
+              <li data-menu="home"><a href="#">홈</a><sup class="hover-only">28</sup>
+              </li>
+              <li data-menu="kitAndTravel"><a href="#">키트 &amp 여행제품</a><sup class="hover-only">24</sup>
+              </li>
+              <li data-menu="giftGuide"><a href="#">기프트 가이드</a><sup class="hover-only">67</sup>
+              </li>
+              <li data-menu="read"><a href="#">읽기</a></li>
+              <li data-menu="store"><a href="#">스토어</a></li>
+            </ul>
+            <ul class="bottom">
+              <li data-menu="search"><a href="#">검색</a></li>
+              <li data-menu="log-in" class="right-menu"><a href="#">로그인</a></li>
+            </ul>
+          </div>
+          <div class="panel second mobile off">
+            <ul>
+              <li>
+                <ul data-menu="skin">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">스킨 케어 기프트</a><sup class="hover-only">17</sup></li>
+                  <li><a href="#">클렌저</a><sup class="hover-only">9</sup></li>
+                  <li><a href="#">각질 제거</a><sup class="hover-only">3</sup></li>
+                  <li><a href="#">트리트먼트 마스크</a><sup class="hover-only">11</sup></li>
+                  <li><a href="#">토너</a><sup class="hover-only">4</sup></li>
+                  <li><a href="#">하이드레이터</a><sup class="hover-only">25</sup></li>
+                  <li><a href="#">립 아이</a><sup class="hover-only">5</sup></li>
+                  <li><a href="#">쉐이빙</a><sup class="hover-only">7</sup></li>
+                  <li><a href="#">선 케어 SPF</a><sup class="hover-only">5</sup></li>
+                  <li><a href="#">키트</a><sup class="hover-only">8</sup></li>
+                  <li><a href="#">스킨케어 세트 추천</a><sup class="hover-only">9</sup></li>
+                </ul>
+              </li>
+              <li>
+                <ul data-menu="hair">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">샴푸</a></li>
+                  <li><a href="#">컨디셔너</a></li>
+                  <li><a href="#">트리트먼트</a></li>
+                  <li><a href="#">그루밍</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul data-menu="bodyAndHand">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">핸드 및 바디 케어 기프트</a></li>
+                  <li><a href="#">핸드</a></li>
+                  <li><a href="#">바디</a></li>
+                  <li><a href="#">퍼스널 케어</a></li>
+                  <li><a href="#">번들</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul data-menu="perfume">
+                  <li><a href="#">향수 모두 보기</a></li>
+                  <li class="panel2-product 01">
+                    <a href="#">
+                      <span class="product-name">로즈 오 드 퍼퓸</span>
+                      <span class="product-desc">로즈, 시소, 과이악우드</span>
+                      <span class="product-detail">50mL / ₩ 180,000</span>
+                      <div><img alt="로즈 오 드 퍼퓸" src="img/perfume-01.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 02">
+                    <a href="#">
+                      <span class="product-name">로즈 앙상블</span>
+                      <span class="product-desc">for those who relish vibrant florals</span>
+                      <span class="product-detail">3제품 / ₩ 230,000</span>
+                      <div><img alt="로즈 앙상블" src="img/perfume-02.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 03"> 
+                    <a href="#">
+                      <span class="product-name">휠 오 드 퍼퓸</span>
+                      <span class="product-desc">스모키 노트, 섬세한 스파이시, 흙내음이 조합된 향</span>
+                      <span class="product-detail">50mL / ₩ 140,000</span>
+                      <div><img alt="휠 오 드 퍼퓸" src="img/perfume-03.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 04">
+                    <a href="#">
+                      <span class="product-name">휠 앙상블</span>
+                      <span class="product-desc">향수, 바디 스크럽, 핸드 밤</span>
+                      <span class="product-detail">3 제품/ ₩ 216,000</span>
+                      <div><img alt="휠 앙상블" src="img/perfume-04.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 05">
+                    <a href="#">
+                      <span class="product-name">마라케시 인텐스 퍼퓸</span>
+                      <span class="product-desc">가장 강렬한 향수</span>
+                      <span class="product-detail">10mL / ₩ 110,000</span>
+                      <div> <img alt="마라케시 인텐스 퍼퓸" src="img/perfume-05.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 06">
+                    <a href="#">
+                      <span class="product-name">마라케시 인텐스 앙상블</span>
+                      <span class="product-desc">우디한 아로마를 좋아하는 분들을 위해</span>
+                      <span class="product-detail">3 제품 / ₩ 165,000</span>
+                      <div><img alt="마라케시 인텐스 앙상블림" src="img/perfume-06.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 07">
+                    <a href="#">
+                      <span class="product-name">마라케시 오 드 퍼퓸</span>
+                      <span class="product-desc">우디, 오리엔탈, 플로랄향</span>
+                      <span class="product-detail">50mL / ₩  145,000</span>
+                      <div><img alt="마라케시 오 드 퍼퓸" src="img/perfume-07.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 08">
+                    <a href="#">
+                      <span class="product-name">테싯 오 드 퍼퓸</span>
+                      <span class="product-desc">상쾌한, 그린, 시트러스향</span>
+                      <span class="product-detail">50mL / ₩ 130,000</span>
+                      <div><img alt="테싯 오 드 퍼퓸" src="img/perfume-08.png" /></div>
+                    </a>
+                  </li>
+                  <li class="panel2-product 09">
+                    <a href="#">
+                      <span class="product-name">테싯 앙상블</span>
+                      <span class="product-desc">시트러스 아로마를 즐기는 사람을 위해</span>
+                      <span class="product-detail">3 제품 / ₩ 185,000</span>
+                      <div><img alt="테싯 앙상블" src="img/perfume-09.png" /></div>
+                    </a>
+                  </li>
+                  <li>
+                    <ul data-menu="search" id="panel1-sub-menu" class="search">
+                      <li data-menu="search">
+                        <div class="search">
+                          <label for="search">
+                            <input type="search" class="search" placeholder="" />
+                          </label>
+                          <a href="#">
+                            <svg aria-labelledby="450bbfc9-b29b-4614-82d3-6f792a39c50e" class="Icon Panel-input--searchIcon" role="img" viewBox="0 0 50 50"><title id="450bbfc9-b29b-4614-82d3-6f792a39c50e">r검색창</title><g><path d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"></path></g></svg>
+                          </a>
+                        </div>
+                      </li>
+                      <li data-menu="search">
+                        <span>인기 검색어</span>
+                        <ul>
+                          <li class="list-item">클렌저</li>
+                          <li class="list-item">페뷸러스</li>
+                          <li class="list-item">파슬리</li>
+                          <li class="list-item">향수</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul data-menu="home">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">홈 케어 기프트</a></li>
+                  <li><a href="#">홈</a></li>
+                  <li><a href="#">문학</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul data-menu="gift">
+                  <li><a href="#">시즈널 기프트 키트</a></li>
+                  <li><a href="#">페이스</a></li>
+                  <li><a href="#">바디 &amp 핸드</a></li>
+                  <li><a href="#">여행</a></li>
+                  <li><a href="#">남성</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul id="panel2-sub-menu-07" class="view">
+                  <li><a href="#">모두 보기</a></li>
+                  <li><a href="#">시즈널 기프트 키트</a></li>
+                  <li><a href="#">이솝에서 사랑받는 제품</a></li>
+                  <li><a href="#">작은 제스처</a></li>
+                  <li><a href="#">관대한 선물</a></li>
+                  <li><a href="#">나를 위한 선물</a></li>
+                  <li><a href="#">홈 케어 기프트</a></li>
+                  <li><a href="#">트래블 기프트</a></li>
+                  <li><a href="#">기프트 번들</a></li>
+                  <li><a href="#">Lunar New Year</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul data-menu="read" id="panel1-sub-menu"  class="read">
+                  <li data-menu="read"><a href="#">회사 소개</a></li>
+                  <li data-menu="read"><a href="#">철학</a></li>
+                  <li data-menu="read"><a href="#">더 렛저</a></li>
+                  <li data-menu="read"><a href="#">The Fabulist</a></li>
+                  <li data-menu="read"><a href="#">Taxonomy of Design</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul data-menu="store" id="panel1-sub-menu" class="store">
+                  <li data-menu="store">
+                    <span>
+                      <a href="#" class="btn loca">현재 위치에서 찾기</a>
+                    </span>
+                    <p>또는 도로명으로 검색</p>
+                    <div class="search">
+                      <label for="search"> 
+                        <input type="text" class="search" />
+                        <span>도시로 검색</span>
+                      </label>
+                      <a href="#">
+                        <svg aria-labelledby="450bbfc9-b29b-4614-82d3-6f792a39c50e" class="Icon Panel-input--searchIcon" role="img" viewBox="0 0 50 50"><title id="450bbfc9-b29b-4614-82d3-6f792a39c50e">매장 검색</title><g><path d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"></path></g></svg>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main id="main">
+        <section class="main-visual">
+          <h1>
+            <a href="../../index.html" class="logo">
+              <svg aria-labelledby="271e036f-c8fc-4f6d-a762-b1bdf2ba19b1" class="Icon NavLogo-icon" role="img" viewBox="0 0 489.7 154.3"><title id="271e036f-c8fc-4f6d-a762-b1bdf2ba19b1">Aesop logo</title><g><path class="NavLogo-icon--path" d="M48.6,22.5L31.8,62.2h34.2L48.6,22.5z M28.6,70.3c-3.2,7.4-9.6,21.7-14.9,42c-1.9-0.3-3.5-0.9-6.6-0.9c-3.1,0-5,0.6-7.1,0.9C14.3,81.2,38,28.9,49.4,0c1.3,0.2,2.3,0.5,4,0.5c1.4,0,2.3-0.2,3.5-0.5c12.3,33.7,47.8,111.7,48.1,112.3c-2.7-0.5-5.5-0.9-9.5-0.9c-4.2,0-7.2,0.5-10.3,0.9c-5.6-19.2-12.2-33.2-16.2-42H28.6z"></path><path class="NavLogo-icon--path" d="M172.4,66.6c0-5.3,0-26.6-19.2-26.6c-14,0-20.7,10.6-22.2,26.6H172.4z M130.9,73.3c0,4.5,0,13.6,4.3,21c7.4,12.1,17.8,12.5,22.5,12.5c15.7,0,23.1-9.6,25.5-13l1.9,0.4c-1,4.5-1,7.1-1.1,9.6c-7.1,6.7-16.8,10.5-29.8,10.5c-24.4,0-39.3-15.4-39.3-40.1c0-22.1,12.2-40.7,38.5-40.7c35.8,0,35.3,31.1,35.1,39.8H130.9z"></path><path class="NavLogo-icon--path" d="M249.6,52.1c-0.6-2.4-1.6-6.4-6.2-9.6c-3.4-2.4-7.8-2.7-10.4-2.7c-9.8,0-14.9,5.1-14.9,12c0,9.3,9.5,12.7,15.1,14.1c14.3,3.7,25.8,6.7,25.8,22.8c0,12.2-8.5,25.8-30.8,25.8c-13,0-22-5.5-23.7-6.7c2.1-3.9,3.4-10.7,3.7-12.8l1.9-0.5c1.1,2.7,2.7,7.1,8.7,10.6c4,2.4,8.2,3,11.7,3c8.4,0,16.2-4,16.2-13.2c0-9.1-5.5-10.9-22.3-16.4c-6.9-2.3-18.3-7.2-18.3-21.3c0-9.1,5.6-23.9,27.8-23.9c11.1,0,17.5,3.4,21.2,5.3c-1.6,4.2-2.7,8-3.2,13.5H249.6z"></path><path class="NavLogo-icon--path" d="M291.5,73.5c0,22.3,9.8,34.6,24.5,34.6c15.4,0,25.5-13.3,25.5-34.5c0-12.5-3.9-33.8-24.7-33.8C291.5,39.8,291.5,68.6,291.5,73.5 M357.9,73c0,25.5-17.6,41.5-42,41.5c-17,0-40.8-7.7-40.8-40.6c0-25,16.7-40.6,40.8-40.6 C346.3,33.4,357.9,53.4,357.9,73"></path><path class="NavLogo-icon--path" d="M399.4,49.6c-3.2,4-6.6,9.8-6.6,25.7c0,14.1,3.2,19.4,6.6,23.4c4.1,5,9.6,7.9,17,7.9 c22.9,0,22.9-27.1,22.9-32.3c0-24.2-11.6-33-22-33C408.7,41.2,403.1,44.9,399.4,49.6 M419.3,114.7c-15.1,0-23.6-8.3-26.2-14.9 c0,25.2-0.2,39.8,0.8,54.5c-2.4-0.6-4.5-0.9-8.4-0.9c-4,0-6.1,0.3-8.6,0.9c1.3-20.8,1.8-41.9,1.8-62.7c0-14.6-0.3-34.3-0.8-57.6 c2.2,0.5,4.8,0.9,7.9,0.9c2.9,0,5.6-0.5,7.9-0.9c-0.6,8.8-0.6,11.2-0.6,14.6c2.6-4.2,9.5-15.4,27.3-15.4c16,0,35.6,11.7,35.6,40.3 C455.9,98.8,440.3,114.7,419.3,114.7"></path><rect x="131.8" y="13.5" class="NavLogo-icon--path" width="44.3" height="5"></rect><path class="NavLogo-icon--path" d="M477.2,98.1c0,1.6,0,3,0,4.4c1.3,0,4.3,0,4.3-2.3C481.5,98.1,479.2,98.1,477.2,98.1 M484.9,109.1 c-0.4,0-0.7-0.1-1.2-0.1c-0.4,0-0.8,0.1-1.5,0.1c-2-2.9-3.6-4.5-4.7-5.8h-0.4c0,1.8,0,3.2,0.2,5.8c-0.5,0-0.7-0.1-1.3-0.1 c-0.6,0-0.8,0.1-1.1,0.1c0.1-1.3,0.2-2.7,0.2-6.2c0-3-0.1-4.4-0.1-5.7c0.9,0,1.5,0,2.9,0c2.9,0,5.9,0,5.9,2.8c0,2.5-2.7,2.9-3.9,3 c0.8,1.1,4.4,5.1,5.1,5.9L484.9,109.1z M479.2,94.8c-4.8,0-8.5,3.8-8.5,8.6c0,4.9,3.6,8.6,8.5,8.6c4.9,0,8.5-3.7,8.5-8.6 C487.8,98.7,484.3,94.8,479.2,94.8 M479.2,92.9c5.9,0,10.5,4.7,10.5,10.5c0,5.9-4.7,10.5-10.5,10.5c-5.8,0-10.5-4.6-10.5-10.5 C468.8,97.5,473.5,92.9,479.2,92.9"></path></g></svg>
+            </a>
+          </h1>
+          <div class="banner">
+            <em>별빛이나 촛불을 통해</em>
+            <h2>아로마틱 캔들 트리오</h2>
+            <p>세 가지 아로마 캔들이 이솝의 홈 레인지를 통해 새롭게 선보입니다. 고대 천문학자의 이름을 붙인 캔들은 고유한 매혹적인 향기를 전합니다.  </p>
+            <span><a href="page/explore-candles.html">레인지 살펴보기<i class="fas fa-arrow-right"></i></a></span>
+          </div>
+          <span><video autoplay muted loop playsinline><source src="https://player.vimeo.com/external/462929072.hd.mp4?s=7ddd1a267129866ae403d67dbf3617447643d889&profile_id=175" type="video/ogg" /><source src="img/main-banner-01.mp4" type="video/mp4" /></video></span>
+        </section>
+        <section class="main-product slide">
+          <div class="slide-wrapper">
+            <p class="dummy"><img alt="" src="img/main-product-01.png"/></p>
+            <ul class="main-slide">
+              <li>  
+                <a href="#">
+                  <img alt="프톨레미 아로마틱 캔들" src="img/main-product-01.png"/>
+                  <em>프톨레미 아로마틱 캔들</em>
+                  <em>가죽, 스모크, 우디 향이 자아내는 감각적인 블렌드</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="아가니스 아로마틱 캔들" src="img/main-product-02.png"/>
+                  <em>아가니스 아로마틱 캔들</em>
+                  <em>카다멈, 미모사, 토바코</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="칼리푸스 아로마틱 캔들" src="img/main-product-03.png"/>
+                  <em>칼리푸스 아로마틱 캔들</em>
+                  <em>짙은 그린과 흙내음이 나는 스파이스의 결합</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="이스트로스 아로마틱 룸 스프레" src="img/main-product-04.png"/>
+                  <em>이스트로스 아로마틱 룸 스프레이</em>
+                  <em>매혹적인 향기가 공간을 채웁니다.</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="브라스 오일 버너" src="img/main-product-05.png"/>
+                  <em>브라스 오일 버너</em>
+                  <em>무게감이 있는 아름다운 오브제</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="캐서린 오일 버너 블렌드" src="img/main-product-06.png"/>
+                  <em>캐서린 오일 버너 블렌드</em>
+                  <em>시트러스와 클로브의 상쾌한 아로마</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="레저렉션 아로마틱 핸드 워시" src="img/main-product-07.png"/>
+                  <em>레저렉션 아로마틱 핸드 워시</em>
+                  <em>열심히 일한 손을 위한 부드러운 클렌징</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="포스트-푸 드롭스" src="img/main-product-08.png"/>
+                  <em>포스트-푸 드롭스</em>
+                  <em>보태니컬 성분의 욕실 탈취제</em>
+                </a>
+              </li>
+            </ul>
+            <p class="control">
+              <a href="#" class="prev"><i class="fas fa-angle-left"><span>이전</span></i></a>
+              <a href="#" class="next"><i class="fas fa-angle-right"><span>다음</span></i></a>
+            </p> 
+          </div>
+        </section>
+        <section class="main-product-wrapper">
+          <section class="main-product ad" id="main-product-ad">
+            <div class="left">
+              <div>
+                <h2>테임 헤어 세럼</h2>
+                <em>페티그레인, 베르가못 라인드, 파촐리</em>
+                <em>스킨이 아닌 모발을 가꾸는 세럼</em>
+                <a href="#left-pop-up">테임 보기</a>
+              </div>
+              <div class="left-detail" id="left-pop-up" title="테임 헤어 세럼 레이어팝업창">
+                <span><a href="#main-product-ad" class="close">닫기</a></span>
+                <img alt="테임 헤어 세럼" src="img/main-product.ad-01.png" />
+                <div class="desc">
+                  <h2>테임 헤어 세럼</h2>
+                  <em>스킨이 아닌 모발을 가구는 세럼</em>
+                  <p>테임 헤어 세럼은 가벼운 제형의 유분감 없는 스킨 세럼에서 영감을 받았습니다. 날리고 부시시한 모발은 매끄럽게 정돈하며 두껍거나 얇은 모발에 상관없이 건강하고 섬세한 연출이 가능합니다.</p>
+                  </p>
+                  <span><a href="#">카트에 추가하기 - ₩ 37,000</a></span>
+                  <span><a href="#">테임 보기<i class="fas fa-arrow-right"><span>더 보기</span></i></a></span>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div>
+                <h2>스컬프 헤어 폴리시</h2>
+                <em>라임, 베르가못 라인드, 클로브 버드</em>
+                <em>뻣뻣함과 유연함 사이의 균형을 맞춘 헤어 젤</em>
+                <a href="#right-pop-up">스컬프 보기</a>
+              </div>
+              <div class="right-detail" id="right-pop-up" title="스컬프 헤어 폴리시 레이어팝업창">
+                <span><a href="#main-product-ad" class="close">닫기</a></span>
+                <img alt="스컬프 헤어 폴리시" src="img/main-product.ad-02.png" />
+                <div class="desc">
+                  <h2>스컬프 헤어 폴리시</h2>
+                  <em>뻣뻣함과 유연함 사이의 균형을 맞춘 헤어 젤</em>
+                  <p>스컬프 헤어 폴리시는 고정력이 뒤어난 헤어 젤입니다. 단단하면서 유연하게 정돈된 헤어 스타일을 완성하며 짧은 길이나 긴 모발, 세심한 스타일링이나 자연스럽게 연출한 헤어 모두에 적합합니다.</p>
+                  <span><a href="#">카트에 추가하기 - ₩ 36,000</a></span>
+                  <span><a href="#">스컬프 보기<i class="fas fa-arrow-right"><span>더 보기</span></i></a></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        
+        <section class="main-product slide second">
+          <div class="slide-wrapper">
+            <p class="dummy"><img alt="" src="img/main-product-01.png"/></p>
+            <ul class="main-slide">
+              <li>  
+                <a href="#">
+                  <img alt="샤인" src="img/main-product-02-01.png"/>
+                  <em>샤인</em>
+                  <em>유분기를 남기지 않고 광택을 선사합니다.</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="로즈 헤어 앤 스칼프 모이스처라이징 마스크" src="img/main-product-02-02.png"/>
+                  <em>로즈 헤어 앤 스칼프 모이스처라이징 마스크</em>
+                  <em>모발과 두피를 건강하게 관리합니다.   </em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="바이올렛 리프 헤어 밤" src="img/main-product-02-03.png"/>
+                  <em>바이올렛 리프 헤어 밤</em>
+                  <em>스타일링을 도와주는 크리미한 컨디셔닝 밤</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="클래식 샴푸" src="img/main-product-02-04.png"/>
+                  <em>클래식 샴푸</em>
+                  <em>순하지만 효과적으로 세정하는 샴푸</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="클래식 컨디셔너" src="img/main-product-02-05.png"/>
+                  <em>클래식 컨디셔너</em>
+                  <em>영양을 공급해주는 가벼운 컨디셔너</em>
+                </a>
+              </li>
+            </ul>
+            <p class="control">
+              <a href="#" class="prev"><i class="fas fa-angle-left"><span>이전</span></i></a>
+              <a href="#" class="next"><i class="fas fa-angle-right"><span>다음</span></i></a>
+            </p>
+          </div>
+        </section>
+        <section class="main-store">
+          <div class="wrapper">
+            <div class="banner">
+              <h2>스토어 로케이터</h2>
+              <p>매장에서는 이솝 컨설턴트가 고객 여러분을 따뜻하게 맞이하고 기프트 구매를 위한 맞춤형 컨설팅을 제공해드립니다.</p>
+              <span><a href="#">가까운 스토어 찾기<i class="fas fa-arrow-right"></i></a></span>
+            </div>
+            <div class="image-wrapper">
+              <div class="image">
+                <ul class="image-slide">
+                  <li>이솝 롯데월드몰</li>
+                  <li>이솝 삼청</li>
+                </ul>
+                <p class="control width">
+                  <a href="#" class="prev"><i class="fas fa-angle-left"><span>이전</span></i></a>
+                  <a href="#" class="next"><i class="fas fa-angle-right"><span>다음</span></i></a>
+                </p>
+              </div>
+              <span>
+                <em>이솝 롯데월드몰</em>
+                <em>이솝 삼청</em>
+              </span>
+            </div>
+          </div>
+        </section>
+        <section class="main-quote">
+          <div>
+            <blockquote>‘It is high time to rekindle the stars.’</blockquote>
+            <cite>Guillaume Apollinaire</cite>
+          </div>
+        </section>
+      </main>
+    
+      <footer id="footer">
+        <nav id="site-map">
+          <ul>
+            <li class="email"> 
+              <div class="email">
+                <label for="email">
+                    <input class="email" type="email" placeholder="이메일 주소" />
+                </label>
+                <a href="#" class="btn"><i class="fas fa-arrow-right"></i> </a>
+              </div>
+              <em class="desc">이솝 제품, 서비스, 스토어, 행사, 문화적 관심사 등 다양한 소식을 받아볼 수 있도록 구독하세요.</em>
+              <label for="checkbox1" class="checkbox">본인의 만 14세 이상 여부를 확인해주세요.
+                <input class="checkbox" type="checkbox" id="checkbox1" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+            <li class="order">
+              <span class="title">주문 및 지원</span>
+              <div>
+                <em><a href="">문의 하기</a></em>
+                <em><a href="">자주 묻는 질문</a></em>
+                <em><a href="">배송 및 반품</a></em>
+                <em><a href="">이용 약관</a></em>
+              </div>
+            </li>
+            <li class="service">
+              <span class="title">서비스</span>
+              <div>
+                <em><a href="">라이브 지원</a></em>
+                <em><a href="">간결함과 진정성</a></em>
+              </div>
+            </li>
+            <li class="location">
+              <span class="title">위치 기본 설정</span>
+              <div>
+                <em>배송: <a href="">대한민국</a></em>
+                <em>언어: <a href="">KO</a></em>
+              </div>
+            </li>
+            <li class="sustainability">
+              <span class="title">지속가능성</span>
+              <div>
+                <em class="desc">이솝의 전 제품은 비건 프렌들리 제품으로, 이솝은 리핑 버니 인증과 비콥 인증을 획득했습니다.</em>
+              </div>
+            </li>
+            <li class="intro">
+              <span class="title">소개</span>
+              <div>
+                <em><a href="">브랜드 스토리</a></em>
+                <em><a href="">Foundation</a></em>
+                <em><a href="">채용</a></em>
+                <em><a href="">이솝 온라인 개인정보 취급 방침</a></em>
+              </div>
+            </li>
+            <li class="social pc">
+              <span class="title">소셜</span>
+              <div>
+                <em><a href="">Instagram</a></em>
+                <em><a href="">Twitter</a></em>
+                <em><a href="">LinkedIn</a></em>
+                <em><a href="">Kakao Plus Friend</a></em>
+              </div>
+            </li>
+            <li class="attention">
+              <span class="title">주의</span>
+              <address>
+                <span>상호: 이솝코리아 유한회사 | 주소: 서울특별시 강남구 선릉로 162길 3 이솝코리아 3층 | 대표자: 마이클안토니오키프 | 대표전화: 1800-1987 | 대표 이메일: aesop@aesop.com | 호스팅 사업자: SAP Hybris | 사업자 등록 번호: 220-88-56014 | 통신판매업 신고번호: 2014-서울강남-02300</span>
+              </address>
+            </li>
+          </ul>
+          <div class="footer-banner">
+            <span>© Aesop</span>
+            <ul class="mobile">
+              <li><a href="#"><img alt="인스타그램" src="img/instagram-light.png" /></a></li>
+              <li><a href="#"><img alt="트위터" src="img/Twitter.svg" /></a></li>
+              <li><a href="#"><img alt="링크드인" src="img/LinkedIn.svg" /></a></li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+    </div>
+<script>
+// header 
+
+menu();
+closing();
+menuSearch();
+scrollUp();
+
+// banner-slide  
+
+setBannerSlide('section.slide:eq(0)', false, 0);
+setBannerSlide('section.slide:eq(1)', false, 0);
+
+// image-slide 
+imageSlide('section.main-store div.wrapper div.image-wrapper', true, 2000);
+
+// main-product.ad
+ad('left', 'right');
+ad('right', 'left');
+
+// mobile 
+$('.gnb.mobile a.more').on('click', function() {
+  $('#wrapper').toggleClass('open');
+  $('#nav-inner-mobile').toggleClass('off');
+  $('.gnb.mobile').toggleClass('on');
+  console.log('open');
+});
+
+
+
+
+
+   
+
+  
+</script>
+  </body>
+</html>
