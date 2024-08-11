@@ -37,7 +37,7 @@
 
 **School of Visual Arts (졸업)**
 
-2018.01 - 2020.12
+2018.01 - 2019.12
 
 Bachelor of Fine Arts  
 
