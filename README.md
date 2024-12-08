@@ -1,46 +1,38 @@
 # 함은영
 
 ## "안녕하세요,
- 창작하는 퍼블리셔 함은영입니다."
+ 창작하는 웹 퍼블리셔 함은영입니다."
 
-같은 문제를 다른 시각으로 바라보고 해결하는 데에 즐거움을 느낍니다. 
+문제를 다양한 시각으로 바라보고 창의적인 방법으로 해결하는 것을 즐깁니다. 웹 퍼블리싱과 UI 개발에 열정을 가지고, 세심하고 접근성 높은 웹을 만들기 위해 항상 노력하고 있습니다.
 
+---
 
-**Skills** : `HTML` `CSS` `Javascript` `React` `Vue` `React Native`
+`HTML` `CSS` `Javascript` `React` `Vue` `React Native`,`JAVA`, `SPRING`, `SQL`
+
+---
 
 **git** : [https://amyhaaaaam.github.io/](https://amyhaaaaam.github.io/)
 
 **이메일** : amyeunyoungham@gmail.com
 
-# **Career**
+# 경력
 
 **Andwise**
 
 2021.04 - 현재
 
-- User Interface 개발
-- 웹 퍼블리싱
-
-
-**Space 776**
-
-2020.02 - 2020.12
-
-- *Homecoming* 가상 전시 큐레이팅에 어시스트로 참여
-- 가상 전시 웹사이트의 로고 디자인 및 UI 디자인, 제작
-- 소셜 미디어 홍보
-- 큐레이터 개인 웹사이트 UI 디자인 및 제작
+- User Interface 개발 및 웹 퍼블리싱 담당
+- 다양한 웹사이트와 인터페이스 개발, 웹 접근성 및 모바일 최적화에 중점
 
 ---
 
-# **Education**
+# 학력
 
 **School of Visual Arts (졸업)**
 
-2018.01 - 2020.12
+2018.01 - 2019.12
 
 Bachelor of Fine Arts  
-
 
 **서울여자대학교 (중퇴)**
 
@@ -48,28 +40,62 @@ Bachelor of Fine Arts
 
 현대미술과
 
----
+**분당고등학교 (졸업)** 
 
-# Work experience
-
-**이화여자대학교 학과, 부속기관 사이트 구축** 
-
-**영남대학교 메인, 학과, 부속기관 사이트 구축** 
-
-**한글문화연대 메인 사이트 구축** 
-
-**광림교회 메인사이트 구축**
-
-- HTML5, CSS3, Javascript, jQuery를 사용한 반응형 웹사이트 제작
-- JAVA로 개발된 위젯에 데이터 필드 정의 후 JSTL 문법으로 사용자 위젯 개발
-- 다양한 플러그인(Swiper, fullpage, scrollert 등) 사용
-- 다양한 도식을 마크업과 CSS로 구현
-- 재사용 가능한 템플릿 제작
-
+2009.03 - 2012.02
 
 ---
 
-# Other Project
+# 주요 프로젝트 경험
+
+**홍익대학교**
+
+2023 - 2024
+
+- 웹접근성 인증
+- 대표 홈페이지(국/영문), 포토갤러리, 마이홍익포털 사이트 제작
+- LocalStorage를 활용하여 커스텀 화면 구성 기능 구현
+- Masonry 플러그인과 Clipboard 플러그인 사용
+- YouTube API로 메인 비주얼에 유튜브 노출 기능 구현
+- 재사용 가능한 스크립트로 커스텀 썸네일 및 버튼 적용
+- 유지보수 용이한 CSS 변수 활용
+- Java와 JSTL로 PDF 파일 관리 위젯 개발
+- FullCalendar 플러그인 커스터마이징
+
+**BRIC(생물학연구정보센터)**
+
+**사이트** 
+
+2022 - 2023
+
+- 웹접근성 인증
+- 웹접근성을 고려한 시맨틱 마크업으로 다양한 폼 제작
+- 이메일 템플릿 제작
+
+**이화여자대학교** 
+
+**학과 부속 템플릿 사이트** 
+
+2022
+
+- 유지보수에 용이한 템플릿 사이트 제작
+- Swiper 플러그인과 YouTube API를 이용한 메인 비주얼 콘텐츠 구현
+- Java와 JSTL로 퀵메뉴 위젯 개발
+
+**영남대학교** 
+
+2021 - 2022
+
+- 웹접근성 인증
+- 국문/영문 사이트 및 95개 학과 사이트 제작
+- 유지보수에 용이한 템플릿 사이트 제작
+- Java와 JSTL로 사용자 위젯 개발
+- 다양한 도식을 사용자가 관리할 수 있도록 마크업과 CSS로 구현 (예: 조직도)
+- 스크롤에 반응하는 해시탭(앵커탭) 구현
+
+---
+
+# 기타 프로젝트
 
 **투두 앱**
 
@@ -77,14 +103,14 @@ Bachelor of Fine Arts
 
 - Expo에 React, React Native로 제작한 날씨 앱
 - AsyncStorage에 임시로 사용자가 입력한 데이터를 저장
-- 입력한 데이터를 수정, 완료표시, 삭제를 할 수 있도록 제작
+- 사용자 데이터 수정, 완료 표시, 삭제 기능 구현
 
 **날씨 앱** 
 
 - [https://amyhaaaaam.github.io/weatherapp/](https://amyhaaaaam.github.io/weatherapp/)
 
 - Expo에 React, React Native로 제작한 날씨 앱
-- 현재 expo go를 설치한 모바일에서만 앱 확인 가능
+- 현재 expo go를 설치한 모바일에서만 확인 가능
 
 **스네이크 게임** 
 
@@ -92,16 +118,7 @@ Bachelor of Fine Arts
 
 - Vanila Javascript로 제작한 스네이크 게임
 
-**사용자 매뉴얼 작성** 
+**사내 사이트 개설** 
 
-- CMS를 사용하는 사용자가 매뉴얼만 보고 순서대로 따라할 시 메인 페이지와 서브 페이지를 생성할 수 있도록 도와주는 문서 작성.
-- 개발자용 / 비개발자용 분리하여 작성
-
-**팀 사이트 개설** 
-
-- 팀내에서 자주 사용하는 코드 및 게시판 관련 소스를 한 곳에 정리하고자 팀 사이트를 생성함
-- 메뉴 관련 콘텐츠 소스 - GNB, LNB, TAB, BREADCRUMB(HTML, CSS, Javascript, JSTL)
-- 웹 접근성 지침 준수하기 위한 콘텐츠
-- 게시판 list, view, write 페이지 퍼블리싱 소스(HTML, CSS, Javascript)
-- 메인 페이지에 사용되는 메인비주얼, 유형별 미니보드 등 소스(HTML, CSS, Javascript, JSTL)
-- Swiper plugin을 이용한 다양한 활용 사례
+- 팀 내에서 자주 사용하는 코드 및 게시판 관련 소스를 정리하는 사내 사이트 제작
+- 웹 접근성 지침을 준수한 콘텐츠와 Swiper 플러그인 사례 아카이브
