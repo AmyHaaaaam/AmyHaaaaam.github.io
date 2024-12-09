@@ -73,7 +73,7 @@ caption.hide{position:static;width:0;height:0;text-indent:-9999px;}
 .header .h1-type01{display:inline-block;}
 .header .h1-type01 a{display:block;padding:20px 0;font-size:2rem;line-height:4rem;font-weight:var(--font-bold);}
 .gnb-ul{display:flex;margin:0 -40px;}
-.gnb-ul li{padding:0 3vw;}
+.gnb-ul li{padding:0 2vw;}
 .gnb-ul li a{display:block;font-size:2rem;line-height:4rem;color:var(--text-color01);font-weight:var(--font-bold);}
 .btn-m-menu{display:none;}
 .slideMenu{display:none;}
@@ -126,13 +126,13 @@ caption.hide{position:static;width:0;height:0;text-indent:-9999px;}
 
 /* footer */
 .footer{position:relative;background:#fff;overflow:hidden;}
-.footer-box{position:relative;margin:0 auto;padding:20vh 20px;width:100%;max-width:1400px;box-sizing:border-box;}
+.footer-box{display:flex;flex-direction:column;justify-content:center;position:relative;margin:0 auto;padding:20vh 20px;width:100%;max-width:1400px;min-height:calc(var(--vh, 1vh)*100);box-sizing:border-box;}
 .footer-box p:not(.guide-text){font-size:4.4rem;line-height:5.4rem;font-weight:var(--font-bold);text-align:center;}
 .footer-box ul{display:flex;justify-content:center;margin:0 -40px;padding:50px 0 0;}
 .footer-box ul li{padding:0 20px;}
 .footer-box ul li a{font-size:2rem;line-height:2.4rem;font-weight:var(--font-bold);}
-.footer-box .guide-text{position:relative;min-width:10px;min-height:5.4rem;font-size:4.4rem;line-height:5.4rem;font-weight:var(--font-bold);}
-.footer-box .guide-text::before {content:"채용 및 협업 제안이 있으신가요?";position:absolute;top:0;left:50%;border-right:1px solid black;width:auto;height:100%;overflow:hidden;animation:typing 7s steps(20) infinite;transform:translateX(-50%);}
+.footer-box .guide-text{position:relative;min-width:10px;min-height:5.4rem;font-size:4.4rem;line-height:5.4rem;font-weight:var(--font-bold);text-align:center;}
+/*.footer-box .guide-text::before {content:"채용 및 협업 제안이 있으신가요?";position:absolute;top:0;left:50%;border-right:1px solid black;width:auto;height:100%;overflow:hidden;animation:typing 7s steps(20) infinite;transform:translateX(-50%);}*/
 
 @keyframes typing{
   0% {

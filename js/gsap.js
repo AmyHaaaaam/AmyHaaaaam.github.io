@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //let sections = gsap.utils.toArray(".main-section .section-title");
   gsap.to(".main-section01 .section-title", {
     xPercent: -100,
-    ease: "none",
+    ease: "power2.out",
     scrollTrigger: {
       trigger: ".main-section01",
       pin: true,
-      scrub: true,
+      scrub: 1,
       toggleClass: "active",
       end: () => "+=" + document.querySelector(".main-section01  .section-title").offsetWidth
     }
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   ScrollTrigger.create({
     trigger: ".main-section02",
     animation: tl,
-    scrub: true,
+    scrub: 5,
     toggleClass: "active",
     //markers: true,
     start: "top center",
@@ -74,4 +74,46 @@ document.addEventListener("DOMContentLoaded", (event) => {
       end: "bottom 100px center",
     });
   });
+
+   //footer
+  ScrollTrigger.create({
+    trigger: '.footer-box', // 각각의 요소를 트리거로 설정
+    scrub: true,
+    toggleClass: "active",
+    markers: true,
+    start: "top center",
+    once: true,  // 최초 1회만 실행
+    onEnter: () => {  // onEnter로 스크롤이 해당 위치에 올 때 실행
+      var footerBox = document.querySelector('.footer-box');
+      if (footerBox.classList.contains('active')) {
+        initTextTypingAnimation();
+      }
+    },
+  });
 });
+
+// Text Typing animation
+function initTextTypingAnimation() {
+	
+	const guide = document.getElementById('guide-text');
+	const guideText = guide.getAttribute('data-content');
+
+	guide.textContent = guideText;
+
+	function typeText(text, elementId, speed) {
+		let index = 0;
+		const element = document.getElementById(elementId);
+		element.textContent = ''; // 초기화
+
+		function type() {
+		if (index < text.length) {
+			element.textContent += text[index];
+			index++;
+			setTimeout(type, speed);
+		}
+		}
+
+		type();
+	}
+	typeText(guideText, 'guide-text', 150);
+}
