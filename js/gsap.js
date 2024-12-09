@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     trigger: '.footer-box', // 각각의 요소를 트리거로 설정
     scrub: true,
     toggleClass: "active",
-    markers: true,
+    //markers: true,
     start: "top center",
     once: true,  // 최초 1회만 실행
     onEnter: () => {  // onEnter로 스크롤이 해당 위치에 올 때 실행
